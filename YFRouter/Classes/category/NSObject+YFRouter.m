@@ -10,12 +10,12 @@
 @implementation NSObject (YFRouter)
 
 
--(NSString *)yf_routerCode{
+-(YFRouterSlotData *)yf_routerSoletData{
     return objc_getAssociatedObject(self, _cmd);
 }
 
--(void)setYf_routerCode:(NSString *)routerCode{
-    objc_setAssociatedObject(self, @selector(yf_routerCode), routerCode, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+-(void)setYf_routerSoletData:(YFRouterSlotData * _Nonnull)yf_routerSoletData;{
+    objc_setAssociatedObject(self, @selector(yf_routerSoletData), yf_routerSoletData, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

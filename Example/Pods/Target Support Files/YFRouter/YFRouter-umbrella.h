@@ -12,7 +12,11 @@
 
 #import "NSObject+YFRouter.h"
 #import "NSString+YFRouter.h"
+#import "YFRouterManager+Help.h"
+#import "YFRouterConstants.h"
+#import "YFRouterHandleCenter.h"
 #import "YFRouterManager.h"
+#import "YFRouterSlotData.h"
 
 FOUNDATION_EXPORT double YFRouterVersionNumber;
 FOUNDATION_EXPORT const unsigned char YFRouterVersionString[];

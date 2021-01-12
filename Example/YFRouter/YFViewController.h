@@ -9,10 +9,12 @@
 @import UIKit;
 @import YFRouter;
 
+
+@interface CellModel : NSObject
+
+
+@end
+
 @interface YFViewController : UIViewController
-
-
-
-
 
 @end

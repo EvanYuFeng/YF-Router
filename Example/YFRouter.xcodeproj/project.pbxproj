@@ -24,6 +24,7 @@
 		C4ABC4A525ABFD8700FA4902 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4ABC4A425ABFD8700FA4902 /* Main.storyboard */; };
 		C4ABC4B425AC021700FA4902 /* TempAVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ABC4B225AC021700FA4902 /* TempAVC.m */; };
 		C4ABC4B525AC021700FA4902 /* TempAVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4ABC4B325AC021700FA4902 /* TempAVC.xib */; };
+		C4ABC4EE25AD7E5100FA4902 /* YFTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ABC4ED25AD7E5100FA4902 /* YFTestModel.m */; };
 		E1AFA4F8E0F69554C8A14E6F /* Pods_YFRouter_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918B55986E8C5A7417B70B86 /* Pods_YFRouter_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,8 @@
 		C4ABC4B125AC021700FA4902 /* TempAVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TempAVC.h; sourceTree = "<group>"; };
 		C4ABC4B225AC021700FA4902 /* TempAVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempAVC.m; sourceTree = "<group>"; };
 		C4ABC4B325AC021700FA4902 /* TempAVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TempAVC.xib; sourceTree = "<group>"; };
+		C4ABC4EC25AD7E5000FA4902 /* YFTestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFTestModel.h; sourceTree = "<group>"; };
+		C4ABC4ED25AD7E5100FA4902 /* YFTestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFTestModel.m; sourceTree = "<group>"; };
 		DC4EF84E0C7BB7FA68BBC667 /* Pods-YFRouter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YFRouter_Example.release.xcconfig"; path = "Target Support Files/Pods-YFRouter_Example/Pods-YFRouter_Example.release.xcconfig"; sourceTree = "<group>"; };
 		ED69A12C0B50DE24201D57D8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +159,8 @@
 				C4ABC4B125AC021700FA4902 /* TempAVC.h */,
 				C4ABC4B225AC021700FA4902 /* TempAVC.m */,
 				C4ABC4B325AC021700FA4902 /* TempAVC.xib */,
+				C4ABC4EC25AD7E5000FA4902 /* YFTestModel.h */,
+				C4ABC4ED25AD7E5100FA4902 /* YFTestModel.m */,
 			);
 			name = "Example for YFRouter";
 			path = YFRouter;
@@ -391,6 +396,7 @@
 				C4ABC4B425AC021700FA4902 /* TempAVC.m in Sources */,
 				6003F59E195388D20070C39A /* YFAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* YFViewController.m in Sources */,
+				C4ABC4EE25AD7E5100FA4902 /* YFTestModel.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

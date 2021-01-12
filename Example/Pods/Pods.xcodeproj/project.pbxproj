@@ -10,67 +10,74 @@
 		00224C929D57F45B70E87359E719948D /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11C410135C7E89353B480AC8DE0BFB77 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */; };
 		121439AB6B4061E1B6222256817548FA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E658F388F01C72599CA75537950B6095 /* XCTest.framework */; };
-		1489098927A9548A69659EA68BA955B8 /* NSObject+YFRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = E97619770CFCDD5A0A4906B3EBF26708 /* NSObject+YFRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12D4760A38E3E5149F7ACFECB7C48F95 /* YFRouterSlotData.h in Headers */ = {isa = PBXBuildFile; fileRef = 08D674A1E809AF4450DE8F62E4ED61E5 /* YFRouterSlotData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13ED05489E2F24D08036C6F4CF27DF4C /* YFRouterConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C3CC719DB5D15E607EA929C22992B9A /* YFRouterConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14AD81D52FAD9CF2C065C61FB00C3B4F /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */; };
-		2BA4E4C59F81B50951226BC2BB28E4DF /* YFRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B40271AF6BC7410F1113C2FF05CFAA /* YFRouterManager.m */; };
+		1B13A90AD6611DEC4CB5BF08DF0DAB26 /* NSString+YFRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E2793DCF5A6E027FAD3070F5DA3443 /* NSString+YFRouter.m */; };
+		244D9F0C4CD674CE9E336C1E368F6694 /* YFRouterHandleCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B55CCB068BD5535A5F6D270FA33F3A36 /* YFRouterHandleCenter.m */; };
+		2B99137D4F4E7FF4CFF563BBCF89A558 /* YFRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D40F79E7C09C7459EFDF1C604D7036F6 /* YFRouter-dummy.m */; };
 		2DCFF0CE0BD295F1D46D3247F36B192C /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */; };
 		2E4C0BD2363ABABB6470FBA5415985AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3280BB5E7B57C31D41117A74F76E9DF3 /* QuartzCore.framework */; };
+		2FA0FB75A0A491CA3E9DA832647F3725 /* NSObject+YFRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FEB02EC8585A95E9FA3DE5C70F272C /* NSObject+YFRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40039E0AF0D764360B1D4FC4F7950D2E /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4D70BE618562BBBC00BFA0E116D2207A /* NSObject+YFRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E7F45AF3A58C0F335A557C12FFD0B8 /* NSObject+YFRouter.m */; };
-		52F607BD2DCCE7D39030D14766C1DDD4 /* YFRouterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6409F451B3CEEA416A73C6AA537E8622 /* YFRouterManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		57B8ED29F3265AAA402D19DC2E6D4E13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
-		5921D0D15C30C9C4142F0D4B4250AC19 /* YFRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD47DF18464A7EB1CB400F4944F30455 /* YFRouter-dummy.m */; };
+		45651FFF9178EEA02CAC4487F840C26F /* YFRouter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D4F27F323CC0A9A2D0D385EA88DF94DD /* YFRouter.bundle */; };
+		497572757C829BC38B787E6A775F181E /* YFRouter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FEE678042D2443CA1D1E7FB676E82E /* YFRouter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49B7CDCD99EA47BF0A2635223BB63F27 /* YFRouterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 53E25A6992B49B96A38CC3457229B568 /* YFRouterManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52B06150CA927025F711CFDA62D3B237 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
 		5FEFF79EE586F541202A44BF380AFEEB /* Pods-YFRouter_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58AD0F11CD4D11085D2B8D26FC377FD7 /* Pods-YFRouter_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		60D344FADC627099E679AEC0A4B95D13 /* YFRouter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DF8B8023E439DB3CDA9C832279489DF /* YFRouter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		675BDC6E95FE85B80127FD9CD76F7AE3 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A023D8025666BEC88D5E34D5B59CE4 /* ReplaceMe.m */; };
 		6DBC8EB7532E931C2FBDA71D1E0B66A4 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */; };
+		73456ED67BA598AFFB84D98E561940B4 /* YFRouterManager+Help.h in Headers */ = {isa = PBXBuildFile; fileRef = 0318B0B0D7479481CF12492C04B17651 /* YFRouterManager+Help.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73E9766F0A288393FD1C5B9A9C1B8DC6 /* NSObject+YFRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = E830C15FD7D4DF52A2CD704D7BD53067 /* NSObject+YFRouter.m */; };
 		741CA412F41FB72ADC615F831875872C /* Pods-YFRouter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9E1096937989A22E25660A39FD8ED7 /* Pods-YFRouter_Example-dummy.m */; };
-		785AFE4E756F367C12170C8D77A14CC5 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 06056A80B8F500C62839A9DAE92EABBB /* ReplaceMe.m */; };
-		786748049DE6DB24137849B04EA22156 /* YFRouter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D4F27F323CC0A9A2D0D385EA88DF94DD /* YFRouter.bundle */; };
 		88396E68DC05A379282F3B374F75F43C /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */; };
 		8CE3BF0ACE07EA42DD5DAC871BF4B767 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */; };
+		8E2ADE80DA5992D50C8A4933990335A4 /* YFRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A87C9168712DE27C0EFB0D1F286F80CA /* YFRouterManager.m */; };
 		90142C6259374E18E640396A59AD379A /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D65089019D558E5A9661F2DCAD20313 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */; };
 		9DDF4DACB25B4C6CDFDCB486D01A9078 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
-		9F38AD6B142E150C0406BF77B16CBB56 /* NSString+YFRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2C10C74B1410793E1ECBE0BE9CB652 /* NSString+YFRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A525E29E0A8079B35B793D8A2B5FBDF2 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */; };
 		A5596C815463A17ECFA2C30EDF602E3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
 		ADC87E7177AB7E56D0379B058C7282B2 /* Pods-YFRouter_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF38C86C2317841FD170E64983AA4E8 /* Pods-YFRouter_Tests-dummy.m */; };
-		B5BB7862568538E8CF5346DB3B881B41 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2DE43AB187A6F8F6BFD553577A3DC /* ReplaceMe.m */; };
+		B2DAF3A42F73EAD5EBC135791D660F90 /* YFRouterHandleCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F17E0A7F1B4303C5D60698348A536B6 /* YFRouterHandleCenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B44A33F06320511E16E6217CDD631778 /* YFRouterManager+Help.m in Sources */ = {isa = PBXBuildFile; fileRef = A27FABCF7BB5588E3CBFDB2274254FF8 /* YFRouterManager+Help.m */; };
 		B74CD6E6EBEA0B642776BCB37850415D /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		BD4953074A12E769ED4E6C94F5E73694 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA24A38BA9EE106B59E3D4C8DD1CE0E /* UIKit.framework */; };
+		C179AE846375793662143CB85FFC9988 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DB7A450ADEE1F120E7E1CC47DCF93C /* ReplaceMe.m */; };
 		C49D52712466511E332C952834C81FE1 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA63ADACAC6C2BF1E30108E6BEF68A09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
+		CDB58F37F485F26C0EC74FA2AC020D59 /* YFRouterSlotData.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CF9B67E14B0BEFC96D87F39F06C2CD /* YFRouterSlotData.m */; };
 		D04AAC8B22E4A4DC4F39891C4E52F251 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		DD10307157CBED0265D18CE81547BE3C /* Pods-YFRouter_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB226A1E3F0AD4CD2830C002CDA23568 /* Pods-YFRouter_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7A25E4B9183CBA6E4F7056D589C4CE5 /* NSString+YFRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B946B9997702D41B6829C71A8260D672 /* NSString+YFRouter.m */; };
 		E8AC509D18EBF21B1FEA909652A01108 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */; };
+		E8BE2437C46A412E84126ABBCCD91975 /* NSString+YFRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = C995034D459EA5CE9F24E02E3241D666 /* NSString+YFRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1AAAE00BB32B733B238E2B4E8424506 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F720FAF13A108CE6901E0A8B0580E1E8 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2912FDF4B10A7BF5F0670A933FF58067 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 98A98149697C80CEF8D5772791E92E66;
-			remoteInfo = FBSnapshotTestCase;
-		};
-		7158B32A4F13AD3291864F57B6C15E19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C709DD5C62825AC11D6526B1360134E8;
-			remoteInfo = "Pods-YFRouter_Example";
-		};
-		889605135FFC1B091033AA7459AE4B63 /* PBXContainerItemProxy */ = {
+		01DF310FA292B82904966EC15D003623 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F98021CAE61953A0B868EA839BD9381F;
 			remoteInfo = "YFRouter-YFRouter";
 		};
-		B3794C12B7D1ED18A0E104C48E27C711 /* PBXContainerItemProxy */ = {
+		6565ED358AACCFC65D28F3500669EDB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98A98149697C80CEF8D5772791E92E66;
+			remoteInfo = FBSnapshotTestCase;
+		};
+		90C51DD166F55D761B8295F57ECF7E22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C709DD5C62825AC11D6526B1360134E8;
+			remoteInfo = "Pods-YFRouter_Example";
+		};
+		BB6D42D0513B81CD64C70864B29EE3C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -80,100 +87,92 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06056A80B8F500C62839A9DAE92EABBB /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
+		0318B0B0D7479481CF12492C04B17651 /* YFRouterManager+Help.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YFRouterManager+Help.h"; sourceTree = "<group>"; };
+		08D674A1E809AF4450DE8F62E4ED61E5 /* YFRouterSlotData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YFRouterSlotData.h; sourceTree = "<group>"; };
 		0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
-		13E7F45AF3A58C0F335A557C12FFD0B8 /* NSObject+YFRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YFRouter.m"; sourceTree = "<group>"; };
+		12B2F3D016C92A10B56C187582E8804D /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
 		14E390B46933B73DC1F842884BB100B3 /* YFRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YFRouter.framework; path = YFRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		166B7C2B4E05AB9350C96902B5AF7C45 /* YFRouter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YFRouter-Info.plist"; sourceTree = "<group>"; };
 		1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
+		1CF98B489A993223346EFBD85E8C96D4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		1DA24A38BA9EE106B59E3D4C8DD1CE0E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
+		2590860CA65F5918C0ACD954B5AA859F /* YFRouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YFRouter-prefix.pch"; sourceTree = "<group>"; };
+		2719299155A7D8C94A200E5E91E83EB1 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
 		277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
-		2C3583AC51732A06A6BC6ABE807AFE5E /* YFRouter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YFRouter.modulemap; sourceTree = "<group>"; };
-		2D8357DB4BD5B2E0D07F6AD052F77BE2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		2EFE89ED2E42FEE02985F8A81402E902 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
+		30CF9B67E14B0BEFC96D87F39F06C2CD /* YFRouterSlotData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YFRouterSlotData.m; sourceTree = "<group>"; };
 		3280BB5E7B57C31D41117A74F76E9DF3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		389BA131A3A7D3E83C092E6E9824B079 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		38FEE678042D2443CA1D1E7FB676E82E /* YFRouter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YFRouter-umbrella.h"; sourceTree = "<group>"; };
 		392DF2B8FC648D17D571651033C4180E /* Pods-YFRouter_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YFRouter_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		3A19472A91EFCA8918E6FD5ACEC80CA2 /* Pods-YFRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YFRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3A94FA79DA127279A236DD7389C11087 /* Pods-YFRouter_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YFRouter_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		3B2C10C74B1410793E1ECBE0BE9CB652 /* NSString+YFRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+YFRouter.h"; sourceTree = "<group>"; };
-		3D98F5F1004966837280540DD24FEE8B /* ResourceBundle-YFRouter-YFRouter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-YFRouter-YFRouter-Info.plist"; sourceTree = "<group>"; };
-		3DF2DE43AB187A6F8F6BFD553577A3DC /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = YFRouter/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		3FDD2EFFF8A494533953FF90A2A3E467 /* Pods-YFRouter_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YFRouter_Tests.modulemap"; sourceTree = "<group>"; };
 		4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
+		4B1D8E8202BCC1B0A548937BCB078DCD /* YFRouter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YFRouter-Info.plist"; sourceTree = "<group>"; };
+		4C3CC719DB5D15E607EA929C22992B9A /* YFRouterConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YFRouterConstants.h; sourceTree = "<group>"; };
 		4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.release.xcconfig; sourceTree = "<group>"; };
 		4C9E1096937989A22E25660A39FD8ED7 /* Pods-YFRouter_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YFRouter_Example-dummy.m"; sourceTree = "<group>"; };
+		4D5D211E840390C1DAC6549F0D499C05 /* YFRouter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = YFRouter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		53E25A6992B49B96A38CC3457229B568 /* YFRouterManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YFRouterManager.h; sourceTree = "<group>"; };
 		57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		58AD0F11CD4D11085D2B8D26FC377FD7 /* Pods-YFRouter_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YFRouter_Tests-umbrella.h"; sourceTree = "<group>"; };
 		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6409F451B3CEEA416A73C6AA537E8622 /* YFRouterManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YFRouterManager.h; sourceTree = "<group>"; };
 		654A6C69C492A5AA6D4AC022209A62B0 /* Pods_YFRouter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YFRouter_Tests.framework; path = "Pods-YFRouter_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		65F170B41ED5FF124A31FC7483259C0A /* Pods-YFRouter_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YFRouter_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		685ECFAA7E3F20C6ECB78CE55314CCB8 /* Pods-YFRouter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YFRouter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		6B09CED3EC4627A1E6D289DE94F5DAB1 /* Pods-YFRouter_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YFRouter_Tests-Info.plist"; sourceTree = "<group>"; };
-		6DF8B8023E439DB3CDA9C832279489DF /* YFRouter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YFRouter-umbrella.h"; sourceTree = "<group>"; };
+		74CE93A75272AA0A249A82584DAAC371 /* YFRouter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YFRouter.modulemap; sourceTree = "<group>"; };
+		77E2793DCF5A6E027FAD3070F5DA3443 /* NSString+YFRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+YFRouter.m"; sourceTree = "<group>"; };
 		7828CB1A898622E8E2385F2BF897C86A /* Pods-YFRouter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YFRouter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7DF3AC00AEC474BE0431D976E0845FD7 /* Pods-YFRouter_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YFRouter_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
 		8024F11C2BA43E1041B5BE080270F69C /* Pods-YFRouter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YFRouter_Example.release.xcconfig"; sourceTree = "<group>"; };
+		8482743788F99918D07828F460E6A662 /* YFRouter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YFRouter.debug.xcconfig; sourceTree = "<group>"; };
 		88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
-		8B2C50135EC6D5A22C6070FE13A1B6E9 /* YFRouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YFRouter-prefix.pch"; sourceTree = "<group>"; };
 		8C18DFB701A2F784073EA786E89F0242 /* Pods_YFRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YFRouter_Example.framework; path = "Pods-YFRouter_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD3CC41F5ADCCDB699428C98B4D0C11 /* Pods-YFRouter_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YFRouter_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
-		90B40271AF6BC7410F1113C2FF05CFAA /* YFRouterManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YFRouterManager.m; sourceTree = "<group>"; };
+		8F17E0A7F1B4303C5D60698348A536B6 /* YFRouterHandleCenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YFRouterHandleCenter.h; sourceTree = "<group>"; };
 		9468E867498BBAF36F9AFFE4845F8B09 /* FBSnapshotTestCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.debug.xcconfig; sourceTree = "<group>"; };
 		96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2033240B4EEE465DC493886A0D42CD6 /* YFRouter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YFRouter.release.xcconfig; sourceTree = "<group>"; };
+		A27FABCF7BB5588E3CBFDB2274254FF8 /* YFRouterManager+Help.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YFRouterManager+Help.m"; sourceTree = "<group>"; };
+		A6FEB02EC8585A95E9FA3DE5C70F272C /* NSObject+YFRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+YFRouter.h"; sourceTree = "<group>"; };
+		A87C9168712DE27C0EFB0D1F286F80CA /* YFRouterManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YFRouterManager.m; sourceTree = "<group>"; };
+		A9A023D8025666BEC88D5E34D5B59CE4 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = YFRouter/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
-		B0A2D2A2AC96EAAE5A2F715B01D26945 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
+		B4DB7A450ADEE1F120E7E1CC47DCF93C /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
+		B55CCB068BD5535A5F6D270FA33F3A36 /* YFRouterHandleCenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YFRouterHandleCenter.m; sourceTree = "<group>"; };
 		B7103CA00AED20722C5B69CA5B4F6938 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
-		B946B9997702D41B6829C71A8260D672 /* NSString+YFRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+YFRouter.m"; sourceTree = "<group>"; };
 		BB3767525FAAE14B7F51C277E0C1C516 /* Pods-YFRouter_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YFRouter_Example.modulemap"; sourceTree = "<group>"; };
+		C995034D459EA5CE9F24E02E3241D666 /* NSString+YFRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+YFRouter.h"; sourceTree = "<group>"; };
 		CBFF6C5FD9C3A84274A9314D3E940B6E /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		CDF38C86C2317841FD170E64983AA4E8 /* Pods-YFRouter_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YFRouter_Tests-dummy.m"; sourceTree = "<group>"; };
 		D08CEBB9BDD9EF7A662ECFC0305C169E /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
 		D14925A7296D803B387545FBD78B3FA0 /* Pods-YFRouter_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YFRouter_Example-Info.plist"; sourceTree = "<group>"; };
+		D40F79E7C09C7459EFDF1C604D7036F6 /* YFRouter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YFRouter-dummy.m"; sourceTree = "<group>"; };
 		D4F27F323CC0A9A2D0D385EA88DF94DD /* YFRouter.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = YFRouter.bundle; path = "YFRouter-YFRouter.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7A9071F0E2C21E376263D26492AAA28 /* YFRouter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = YFRouter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
+		D96301593EAC92C55E9CD74DA11B7831 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		E0A54639FD6D19B1710C2C5737448CA5 /* Pods-YFRouter_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YFRouter_Example-frameworks.sh"; sourceTree = "<group>"; };
 		E658F388F01C72599CA75537950B6095 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		E97619770CFCDD5A0A4906B3EBF26708 /* NSObject+YFRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+YFRouter.h"; sourceTree = "<group>"; };
-		EAA8D75BE27BB0DF4FBDCE81DFD70342 /* YFRouter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YFRouter.release.xcconfig; sourceTree = "<group>"; };
+		E830C15FD7D4DF52A2CD704D7BD53067 /* NSObject+YFRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YFRouter.m"; sourceTree = "<group>"; };
+		E9303A2A0E51BF2E428D5940423F6CC1 /* ResourceBundle-YFRouter-YFRouter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-YFRouter-YFRouter-Info.plist"; sourceTree = "<group>"; };
 		EB226A1E3F0AD4CD2830C002CDA23568 /* Pods-YFRouter_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YFRouter_Example-umbrella.h"; sourceTree = "<group>"; };
-		EBBB471D0E78B18D94A9038B2598A2A0 /* YFRouter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YFRouter.debug.xcconfig; sourceTree = "<group>"; };
-		FD47DF18464A7EB1CB400F4944F30455 /* YFRouter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YFRouter-dummy.m"; sourceTree = "<group>"; };
 		FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4967B089E6C70A2ED5C0135864E133B9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				57B8ED29F3265AAA402D19DC2E6D4E13 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5C2545D7E6BAAA5B31976C1B22A2CA84 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9DDF4DACB25B4C6CDFDCB486D01A9078 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C6B97E7890A5279A044241151F96920B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,22 +195,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB306BAAF17B590584289C14A4D0AFC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCDBD732164117B766D25EB11C68E534 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B06150CA927025F711CFDA62D3B237 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18664F1EB4E4E07DC2D7B1329A08A278 /* category */ = {
-			isa = PBXGroup;
-			children = (
-				E97619770CFCDD5A0A4906B3EBF26708 /* NSObject+YFRouter.h */,
-				13E7F45AF3A58C0F335A557C12FFD0B8 /* NSObject+YFRouter.m */,
-				3B2C10C74B1410793E1ECBE0BE9CB652 /* NSString+YFRouter.h */,
-				B946B9997702D41B6829C71A8260D672 /* NSString+YFRouter.m */,
-				2EFE89ED2E42FEE02985F8A81402E902 /* ReplaceMe.m */,
-			);
-			name = category;
-			path = YFRouter/Classes/category;
-			sourceTree = "<group>";
-		};
 		219C0DE9962A6BF47C1C3C34C578409E /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +223,36 @@
 				14E390B46933B73DC1F842884BB100B3 /* YFRouter.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2601068C4B811B204EC53541CDDF1F3B /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				B4DB7A450ADEE1F120E7E1CC47DCF93C /* ReplaceMe.m */,
+				8F17E0A7F1B4303C5D60698348A536B6 /* YFRouterHandleCenter.h */,
+				B55CCB068BD5535A5F6D270FA33F3A36 /* YFRouterHandleCenter.m */,
+				53E25A6992B49B96A38CC3457229B568 /* YFRouterManager.h */,
+				A87C9168712DE27C0EFB0D1F286F80CA /* YFRouterManager.m */,
+				08D674A1E809AF4450DE8F62E4ED61E5 /* YFRouterSlotData.h */,
+				30CF9B67E14B0BEFC96D87F39F06C2CD /* YFRouterSlotData.m */,
+			);
+			name = manager;
+			path = YFRouter/Classes/manager;
+			sourceTree = "<group>";
+		};
+		3533C4A2402606CCB6251C795E1DD18A /* category */ = {
+			isa = PBXGroup;
+			children = (
+				A6FEB02EC8585A95E9FA3DE5C70F272C /* NSObject+YFRouter.h */,
+				E830C15FD7D4DF52A2CD704D7BD53067 /* NSObject+YFRouter.m */,
+				C995034D459EA5CE9F24E02E3241D666 /* NSString+YFRouter.h */,
+				77E2793DCF5A6E027FAD3070F5DA3443 /* NSString+YFRouter.m */,
+				12B2F3D016C92A10B56C187582E8804D /* ReplaceMe.m */,
+				0318B0B0D7479481CF12492C04B17651 /* YFRouterManager+Help.h */,
+				A27FABCF7BB5588E3CBFDB2274254FF8 /* YFRouterManager+Help.m */,
+			);
+			name = category;
+			path = YFRouter/Classes/category;
 			sourceTree = "<group>";
 		};
 		35992C52FE7F9D4EB8F0D9AA9B6EEE2A /* Pods-YFRouter_Tests */ = {
@@ -241,15 +272,18 @@
 			path = "Target Support Files/Pods-YFRouter_Tests";
 			sourceTree = "<group>";
 		};
-		449C2053B0E31B5F8AF32B19FA6B600C /* manager */ = {
+		3FD457FDB8DCFA2AB47117AC84E6F58E /* YFRouter */ = {
 			isa = PBXGroup;
 			children = (
-				06056A80B8F500C62839A9DAE92EABBB /* ReplaceMe.m */,
-				6409F451B3CEEA416A73C6AA537E8622 /* YFRouterManager.h */,
-				90B40271AF6BC7410F1113C2FF05CFAA /* YFRouterManager.m */,
+				A9A023D8025666BEC88D5E34D5B59CE4 /* ReplaceMe.m */,
+				3533C4A2402606CCB6251C795E1DD18A /* category */,
+				A23F7F3A6E99E903850479484E461EF7 /* macro */,
+				2601068C4B811B204EC53541CDDF1F3B /* manager */,
+				FB9962EFFEF7B9576722310EFBDB29F5 /* Pod */,
+				AE869565EEDC9BB45A171D1DCA89FC69 /* Support Files */,
 			);
-			name = manager;
-			path = YFRouter/Classes/manager;
+			name = YFRouter;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		4BA2479549DD918290454B1CDCD0B92B /* Core */ = {
@@ -290,22 +324,6 @@
 			path = "Target Support Files/Pods-YFRouter_Example";
 			sourceTree = "<group>";
 		};
-		779D65928ADBA216D1E4E852F5FB95E8 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3D98F5F1004966837280540DD24FEE8B /* ResourceBundle-YFRouter-YFRouter-Info.plist */,
-				2C3583AC51732A06A6BC6ABE807AFE5E /* YFRouter.modulemap */,
-				FD47DF18464A7EB1CB400F4944F30455 /* YFRouter-dummy.m */,
-				166B7C2B4E05AB9350C96902B5AF7C45 /* YFRouter-Info.plist */,
-				8B2C50135EC6D5A22C6070FE13A1B6E9 /* YFRouter-prefix.pch */,
-				6DF8B8023E439DB3CDA9C832279489DF /* YFRouter-umbrella.h */,
-				EBBB471D0E78B18D94A9038B2598A2A0 /* YFRouter.debug.xcconfig */,
-				EAA8D75BE27BB0DF4FBDCE81DFD70342 /* YFRouter.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/YFRouter";
-			sourceTree = "<group>";
-		};
 		906402ECC4C6C5EB58DD365FD2C64E92 /* SwiftSupport */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,22 +332,38 @@
 			name = SwiftSupport;
 			sourceTree = "<group>";
 		};
-		906B3D150A65E6B56ECAAACD492BA750 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				2D8357DB4BD5B2E0D07F6AD052F77BE2 /* LICENSE */,
-				389BA131A3A7D3E83C092E6E9824B079 /* README.md */,
-				D7A9071F0E2C21E376263D26492AAA28 /* YFRouter.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		9B3962B14D6B430E943AE07787F5C6E2 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B911254C2B0DF8787213B8D5A8C58A75 /* YFRouter */,
+				3FD457FDB8DCFA2AB47117AC84E6F58E /* YFRouter */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		A23F7F3A6E99E903850479484E461EF7 /* macro */ = {
+			isa = PBXGroup;
+			children = (
+				2719299155A7D8C94A200E5E91E83EB1 /* ReplaceMe.m */,
+				4C3CC719DB5D15E607EA929C22992B9A /* YFRouterConstants.h */,
+			);
+			name = macro;
+			path = YFRouter/Classes/macro;
+			sourceTree = "<group>";
+		};
+		AE869565EEDC9BB45A171D1DCA89FC69 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9303A2A0E51BF2E428D5940423F6CC1 /* ResourceBundle-YFRouter-YFRouter-Info.plist */,
+				74CE93A75272AA0A249A82584DAAC371 /* YFRouter.modulemap */,
+				D40F79E7C09C7459EFDF1C604D7036F6 /* YFRouter-dummy.m */,
+				4B1D8E8202BCC1B0A548937BCB078DCD /* YFRouter-Info.plist */,
+				2590860CA65F5918C0ACD954B5AA859F /* YFRouter-prefix.pch */,
+				38FEE678042D2443CA1D1E7FB676E82E /* YFRouter-umbrella.h */,
+				8482743788F99918D07828F460E6A662 /* YFRouter.debug.xcconfig */,
+				A2033240B4EEE465DC493886A0D42CD6 /* YFRouter.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/YFRouter";
 			sourceTree = "<group>";
 		};
 		B69B2ECE2D2C9A3924A9231138CE0BBC /* Support Files */ = {
@@ -354,20 +388,6 @@
 				35992C52FE7F9D4EB8F0D9AA9B6EEE2A /* Pods-YFRouter_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		B911254C2B0DF8787213B8D5A8C58A75 /* YFRouter */ = {
-			isa = PBXGroup;
-			children = (
-				3DF2DE43AB187A6F8F6BFD553577A3DC /* ReplaceMe.m */,
-				18664F1EB4E4E07DC2D7B1329A08A278 /* category */,
-				D60F3C6232EEED3901FACCBAFE8C2285 /* macro */,
-				449C2053B0E31B5F8AF32B19FA6B600C /* manager */,
-				906B3D150A65E6B56ECAAACD492BA750 /* Pod */,
-				779D65928ADBA216D1E4E852F5FB95E8 /* Support Files */,
-			);
-			name = YFRouter;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
@@ -401,15 +421,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		D60F3C6232EEED3901FACCBAFE8C2285 /* macro */ = {
-			isa = PBXGroup;
-			children = (
-				B0A2D2A2AC96EAAE5A2F715B01D26945 /* ReplaceMe.m */,
-			);
-			name = macro;
-			path = YFRouter/Classes/macro;
-			sourceTree = "<group>";
-		};
 		E81A37DBDE41E671312C56736544E2FA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +438,16 @@
 				E658F388F01C72599CA75537950B6095 /* XCTest.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		FB9962EFFEF7B9576722310EFBDB29F5 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D96301593EAC92C55E9CD74DA11B7831 /* LICENSE */,
+				1CF98B489A993223346EFBD85E8C96D4 /* README.md */,
+				4D5D211E840390C1DAC6549F0D499C05 /* YFRouter.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,14 +484,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA6AD19A743DA93D9C78CF72C1F83A3B /* Headers */ = {
+		528EFF777B3589ECBF04AD28FD42C3DE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1489098927A9548A69659EA68BA955B8 /* NSObject+YFRouter.h in Headers */,
-				9F38AD6B142E150C0406BF77B16CBB56 /* NSString+YFRouter.h in Headers */,
-				60D344FADC627099E679AEC0A4B95D13 /* YFRouter-umbrella.h in Headers */,
-				52F607BD2DCCE7D39030D14766C1DDD4 /* YFRouterManager.h in Headers */,
+				2FA0FB75A0A491CA3E9DA832647F3725 /* NSObject+YFRouter.h in Headers */,
+				E8BE2437C46A412E84126ABBCCD91975 /* NSString+YFRouter.h in Headers */,
+				497572757C829BC38B787E6A775F181E /* YFRouter-umbrella.h in Headers */,
+				13ED05489E2F24D08036C6F4CF27DF4C /* YFRouterConstants.h in Headers */,
+				B2DAF3A42F73EAD5EBC135791D660F90 /* YFRouterHandleCenter.h in Headers */,
+				73456ED67BA598AFFB84D98E561940B4 /* YFRouterManager+Help.h in Headers */,
+				49B7CDCD99EA47BF0A2635223BB63F27 /* YFRouterManager.h in Headers */,
+				12D4760A38E3E5149F7ACFECB7C48F95 /* YFRouterSlotData.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,17 +504,17 @@
 /* Begin PBXNativeTarget section */
 		21E55AEA88F3293C398474B07883FCDE /* YFRouter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 135C5B5AAD66D07AC198C8F42D597543 /* Build configuration list for PBXNativeTarget "YFRouter" */;
+			buildConfigurationList = 8BA1E0A68A1C12FD0DF6AC33C5D075FF /* Build configuration list for PBXNativeTarget "YFRouter" */;
 			buildPhases = (
-				AA6AD19A743DA93D9C78CF72C1F83A3B /* Headers */,
-				15C61AE44F6907942E70F220EA6F31D2 /* Sources */,
-				4967B089E6C70A2ED5C0135864E133B9 /* Frameworks */,
-				E957D677ED033BFB5D70600988EF876F /* Resources */,
+				528EFF777B3589ECBF04AD28FD42C3DE /* Headers */,
+				648A8B7C0EBBF8D18D15FE1ADCEFFC91 /* Sources */,
+				FCDBD732164117B766D25EB11C68E534 /* Frameworks */,
+				FC83D918B6C616140B8009C14A7D6CB6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				30AB56853353CE540E1DBFB267ACBD47 /* PBXTargetDependency */,
+				4997AC7A007D2A1AA3B7B6F6A96A4CEA /* PBXTargetDependency */,
 			);
 			name = YFRouter;
 			productName = YFRouter;
@@ -508,8 +533,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				E6E104821575B9A0F0A1ACE51E4ABB53 /* PBXTargetDependency */,
-				D51D167180FA2F3BAEDB363F4F3F4C88 /* PBXTargetDependency */,
+				F31E66A48259BC183D4FF3F1AA7DEF55 /* PBXTargetDependency */,
+				6B2A6453EEEBAC7E50145C4B9609CD7D /* PBXTargetDependency */,
 			);
 			name = "Pods-YFRouter_Tests";
 			productName = "Pods-YFRouter_Tests";
@@ -546,7 +571,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9BB2BC8D00D13ED819DB6002BA251B5E /* PBXTargetDependency */,
+				C382084A08E85A20D37119EED3D0BFCE /* PBXTargetDependency */,
 			);
 			name = "Pods-YFRouter_Example";
 			productName = "Pods-YFRouter_Example";
@@ -555,11 +580,11 @@
 		};
 		F98021CAE61953A0B868EA839BD9381F /* YFRouter-YFRouter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3CE79B2704A108D859D2E23B187D979D /* Build configuration list for PBXNativeTarget "YFRouter-YFRouter" */;
+			buildConfigurationList = 870E898044938753CA3EE28068228623 /* Build configuration list for PBXNativeTarget "YFRouter-YFRouter" */;
 			buildPhases = (
-				62148DD7085F8FC72CD4E5880BF8A946 /* Sources */,
-				C6B97E7890A5279A044241151F96920B /* Frameworks */,
-				9960BB62D3687F5EDC5D7A6864EFE4F6 /* Resources */,
+				095672E54E3BD4AB8214851C030FB047 /* Sources */,
+				FB306BAAF17B590584289C14A4D0AFC5 /* Frameworks */,
+				2DC5701B0282543BD9314ED736D477E6 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -602,6 +627,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2DC5701B0282543BD9314ED736D477E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5CC655F1A6C7A45A9693160581076BAE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -616,21 +648,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9960BB62D3687F5EDC5D7A6864EFE4F6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E957D677ED033BFB5D70600988EF876F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				786748049DE6DB24137849B04EA22156 /* YFRouter.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E96EEA61520266F2176889178EA0BF2D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -638,21 +655,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FC83D918B6C616140B8009C14A7D6CB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45651FFF9178EEA02CAC4487F840C26F /* YFRouter.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		15C61AE44F6907942E70F220EA6F31D2 /* Sources */ = {
+		095672E54E3BD4AB8214851C030FB047 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D70BE618562BBBC00BFA0E116D2207A /* NSObject+YFRouter.m in Sources */,
-				E7A25E4B9183CBA6E4F7056D589C4CE5 /* NSString+YFRouter.m in Sources */,
-				785AFE4E756F367C12170C8D77A14CC5 /* ReplaceMe.m in Sources */,
-				785AFE4E756F367C12170C8D77A14CC5 /* ReplaceMe.m in Sources */,
-				785AFE4E756F367C12170C8D77A14CC5 /* ReplaceMe.m in Sources */,
-				B5BB7862568538E8CF5346DB3B881B41 /* ReplaceMe.m in Sources */,
-				5921D0D15C30C9C4142F0D4B4250AC19 /* YFRouter-dummy.m in Sources */,
-				2BA4E4C59F81B50951226BC2BB28E4DF /* YFRouterManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,10 +681,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		62148DD7085F8FC72CD4E5880BF8A946 /* Sources */ = {
+		648A8B7C0EBBF8D18D15FE1ADCEFFC91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73E9766F0A288393FD1C5B9A9C1B8DC6 /* NSObject+YFRouter.m in Sources */,
+				1B13A90AD6611DEC4CB5BF08DF0DAB26 /* NSString+YFRouter.m in Sources */,
+				C179AE846375793662143CB85FFC9988 /* ReplaceMe.m in Sources */,
+				C179AE846375793662143CB85FFC9988 /* ReplaceMe.m in Sources */,
+				C179AE846375793662143CB85FFC9988 /* ReplaceMe.m in Sources */,
+				675BDC6E95FE85B80127FD9CD76F7AE3 /* ReplaceMe.m in Sources */,
+				2B99137D4F4E7FF4CFF563BBCF89A558 /* YFRouter-dummy.m in Sources */,
+				244D9F0C4CD674CE9E336C1E368F6694 /* YFRouterHandleCenter.m in Sources */,
+				B44A33F06320511E16E6217CDD631778 /* YFRouterManager+Help.m in Sources */,
+				8E2ADE80DA5992D50C8A4933990335A4 /* YFRouterManager.m in Sources */,
+				CDB58F37F485F26C0EC74FA2AC020D59 /* YFRouterSlotData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,63 +726,33 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		30AB56853353CE540E1DBFB267ACBD47 /* PBXTargetDependency */ = {
+		4997AC7A007D2A1AA3B7B6F6A96A4CEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "YFRouter-YFRouter";
 			target = F98021CAE61953A0B868EA839BD9381F /* YFRouter-YFRouter */;
-			targetProxy = 889605135FFC1B091033AA7459AE4B63 /* PBXContainerItemProxy */;
+			targetProxy = 01DF310FA292B82904966EC15D003623 /* PBXContainerItemProxy */;
 		};
-		9BB2BC8D00D13ED819DB6002BA251B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = YFRouter;
-			target = 21E55AEA88F3293C398474B07883FCDE /* YFRouter */;
-			targetProxy = B3794C12B7D1ED18A0E104C48E27C711 /* PBXContainerItemProxy */;
-		};
-		D51D167180FA2F3BAEDB363F4F3F4C88 /* PBXTargetDependency */ = {
+		6B2A6453EEEBAC7E50145C4B9609CD7D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-YFRouter_Example";
 			target = C709DD5C62825AC11D6526B1360134E8 /* Pods-YFRouter_Example */;
-			targetProxy = 7158B32A4F13AD3291864F57B6C15E19 /* PBXContainerItemProxy */;
+			targetProxy = 90C51DD166F55D761B8295F57ECF7E22 /* PBXContainerItemProxy */;
 		};
-		E6E104821575B9A0F0A1ACE51E4ABB53 /* PBXTargetDependency */ = {
+		C382084A08E85A20D37119EED3D0BFCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YFRouter;
+			target = 21E55AEA88F3293C398474B07883FCDE /* YFRouter */;
+			targetProxy = BB6D42D0513B81CD64C70864B29EE3C9 /* PBXContainerItemProxy */;
+		};
+		F31E66A48259BC183D4FF3F1AA7DEF55 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FBSnapshotTestCase;
 			target = 98A98149697C80CEF8D5772791E92E66 /* FBSnapshotTestCase */;
-			targetProxy = 2912FDF4B10A7BF5F0670A933FF58067 /* PBXContainerItemProxy */;
+			targetProxy = 6565ED358AACCFC65D28F3500669EDB6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		08D7D4ED5E3A055042560D6196752276 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBBB471D0E78B18D94A9038B2598A2A0 /* YFRouter.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YFRouter/YFRouter-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YFRouter/YFRouter-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/YFRouter/YFRouter.modulemap";
-				PRODUCT_MODULE_NAME = YFRouter;
-				PRODUCT_NAME = YFRouter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		215957ED21616D1D5FE4A6844E1295F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7828CB1A898622E8E2385F2BF897C86A /* Pods-YFRouter_Tests.release.xcconfig */;
@@ -854,6 +852,67 @@
 			};
 			name = Debug;
 		};
+		2F40355C740283C0E01372045678DC01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2033240B4EEE465DC493886A0D42CD6 /* YFRouter.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YFRouter/YFRouter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YFRouter/YFRouter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YFRouter/YFRouter.modulemap";
+				PRODUCT_MODULE_NAME = YFRouter;
+				PRODUCT_NAME = YFRouter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3B5599B44DB352A493E0F15C4A179CC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8482743788F99918D07828F460E6A662 /* YFRouter.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YFRouter/YFRouter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YFRouter/YFRouter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YFRouter/YFRouter.modulemap";
+				PRODUCT_MODULE_NAME = YFRouter;
+				PRODUCT_NAME = YFRouter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		3E39A517897BFCDD1DD7268CB1B69BE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9468E867498BBAF36F9AFFE4845F8B09 /* FBSnapshotTestCase.debug.xcconfig */;
@@ -916,6 +975,22 @@
 			};
 			name = Debug;
 		};
+		83B78013FE678302EE42B68B5961C457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8482743788F99918D07828F460E6A662 /* YFRouter.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/YFRouter";
+				IBSC_MODULE = YFRouter;
+				INFOPLIST_FILE = "Target Support Files/YFRouter/ResourceBundle-YFRouter-YFRouter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = YFRouter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		BF531801B332EDF71FA8F4F9667B86BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */;
@@ -947,34 +1022,19 @@
 			};
 			name = Release;
 		};
-		C34290E37CF76E7ED4D5E13D5D15D01E /* Release */ = {
+		C88C2F3388B788A991DC844E48DC0FAE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAA8D75BE27BB0DF4FBDCE81DFD70342 /* YFRouter.release.xcconfig */;
+			baseConfigurationReference = A2033240B4EEE465DC493886A0D42CD6 /* YFRouter.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YFRouter/YFRouter-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YFRouter/YFRouter-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/YFRouter";
+				IBSC_MODULE = YFRouter;
+				INFOPLIST_FILE = "Target Support Files/YFRouter/ResourceBundle-YFRouter-YFRouter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/YFRouter/YFRouter.modulemap";
-				PRODUCT_MODULE_NAME = YFRouter;
 				PRODUCT_NAME = YFRouter;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -1037,38 +1097,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		CDFF583E179B1FB51CD036CA76422DD6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBBB471D0E78B18D94A9038B2598A2A0 /* YFRouter.debug.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/YFRouter";
-				IBSC_MODULE = YFRouter;
-				INFOPLIST_FILE = "Target Support Files/YFRouter/ResourceBundle-YFRouter-YFRouter-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = YFRouter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		D077AA2137AA3488AD62DC1B8E25E377 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAA8D75BE27BB0DF4FBDCE81DFD70342 /* YFRouter.release.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/YFRouter";
-				IBSC_MODULE = YFRouter;
-				INFOPLIST_FILE = "Target Support Files/YFRouter/ResourceBundle-YFRouter-YFRouter-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = YFRouter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -1140,29 +1168,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		135C5B5AAD66D07AC198C8F42D597543 /* Build configuration list for PBXNativeTarget "YFRouter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				08D7D4ED5E3A055042560D6196752276 /* Debug */,
-				C34290E37CF76E7ED4D5E13D5D15D01E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3CE79B2704A108D859D2E23B187D979D /* Build configuration list for PBXNativeTarget "YFRouter-YFRouter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CDFF583E179B1FB51CD036CA76422DD6 /* Debug */,
-				D077AA2137AA3488AD62DC1B8E25E377 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
 				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		870E898044938753CA3EE28068228623 /* Build configuration list for PBXNativeTarget "YFRouter-YFRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83B78013FE678302EE42B68B5961C457 /* Debug */,
+				C88C2F3388B788A991DC844E48DC0FAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BA1E0A68A1C12FD0DF6AC33C5D075FF /* Build configuration list for PBXNativeTarget "YFRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B5599B44DB352A493E0F15C4A179CC3 /* Debug */,
+				2F40355C740283C0E01372045678DC01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

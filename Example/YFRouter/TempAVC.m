@@ -7,26 +7,50 @@
 //
 
 #import "TempAVC.h"
+#import "YFTestModel.h"
+
+@import YFRouter;
 
 @interface TempAVC ()
-
+@property (nonatomic,strong) NSString *age;
+@property (nonatomic,strong) YFTestModel *testModel;
 @end
 
 @implementation TempAVC
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    YFLog(@"动态映射的age参数值----> %@",_age);
+    YFLog(@"动态映射的自定义model值 \n %@",[_testModel toString]);
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)goBack:(id)sender {
+    if (self.presentationController) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    
 }
-*/
+
+- (IBAction)excutCallBack:(id)sender {
+    
+//    YFTestModel * customModel = [[YFTestModel alloc]initWithName:@"自定义model" andDataArr:@[
+//      @"回调值1",
+//      @"回调值2",
+//    ]];
+//
+//    [[YFRouterManager shareInstance] yf_executCallBackHandle:self andParams:@{
+//        @"name":@"这是回调回去的参数~~~",
+//        @"id":@"123456",
+//        @"customModel":customModel
+//    }];
+    
+  id params =   [[YFRouterManager shareInstance] yf_getTargetVCParams:self];
+    YFLog(@"获取的绑定参数：%@",params);
+}
+
+
 
 @end

@@ -30,6 +30,17 @@
                     <rect key="frame" x="168" y="342" width="62" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="点击返回"/>
+                    <connections>
+                        <action selector="goBack:" destination="-1" eventType="touchUpInside" id="MWZ-xB-sOS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37H-F8-723">
+                    <rect key="frame" x="153" y="399" width="108" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="执行路由的回调"/>
+                    <connections>
+                        <action selector="excutCallBack:" destination="-1" eventType="touchUpInside" id="VnA-96-xdE"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>

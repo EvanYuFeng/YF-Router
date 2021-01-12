@@ -7,18 +7,15 @@
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
+#import "YFRouterSlotData.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (YFRouter)
 
-@property (nonatomic,strong) NSString *yf_routerCode;
-
--(NSString *)yf_routerCode;
-
--(void)setYf_routerCode:(NSString * )routerCode;
-
-
+@property (nonatomic,strong) YFRouterSlotData *yf_routerSoletData;
+-(YFRouterSlotData *)yf_routerSoletData;
+-(void)setYf_routerSoletData:(YFRouterSlotData * _Nonnull)yf_routerSoletData;
 @end
 
 NS_ASSUME_NONNULL_END
