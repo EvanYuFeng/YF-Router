@@ -9,6 +9,8 @@
 #import "YFRouterConstants.h"
 #import "YFRouterHandleCenter.h"
 #import "YFRouterManager+Help.h"
+#import "YFRouterManager+Chain.h"
+
 
 
 @interface YFRouterManager()
@@ -25,10 +27,14 @@
     dispatch_once(&onceToken, ^{
         if (k_instance_singleton == nil) {
             k_instance_singleton = [[YFRouterManager alloc] init];
+//          初始化链式调用的字典
+            [k_instance_singleton setYf_chain_config:[NSMutableDictionary new]];
         }
     });
     return (YFRouterManager *)k_instance_singleton;
 }
+
+
 
 -(BOOL)yf_openVCWithName:(nonnull NSString *)clsName{
     return  [self yf_openVCWithName:clsName

@@ -12,6 +12,7 @@
 
 #import "NSObject+YFRouter.h"
 #import "NSString+YFRouter.h"
+#import "YFRouterManager+Chain.h"
 #import "YFRouterManager+Help.h"
 #import "YFRouterConstants.h"
 #import "YFRouterHandleCenter.h"
