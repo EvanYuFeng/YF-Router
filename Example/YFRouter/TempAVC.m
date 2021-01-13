@@ -47,6 +47,8 @@
 //        @"customModel":customModel
 //    }];
     
+    [YFRouterGlobleInstance yf_executCallBackHandle:self andParams:@"这是回到回去的参数"];
+    
   id params =   [[YFRouterManager shareInstance] yf_getTargetVCParams:self];
     YFLog(@"获取的绑定参数：%@",params);
 }

@@ -25,15 +25,42 @@
     // 链式语法调用
      YFRouterGlobleInstance.yf_clsName(@"xxxVC").yf_done();
 ```
+
 - 直接打开目标VC 带参数 
 ```objc
+    // 注意：！！！ 如果传递的参数是字典，YFRouter会尝试将传递的参数中《key》值与目标VC相同名称的属性进行映射赋值，
+    // 举🌰 ： 
+    // 如果目标VC含有一个属性名称为 orderId  你传递的参数为 @{@"orderId:@"123456"},
+    //这种情况下YFRouter会直接将目标VC的orderId属性映射成 123456
     // 常规方法调用
      [YFRouterGlobleInstance yf_openVCWithName:@"xxxVC" andParams:@{@"orderId":@"123456"}];
     // 链式语法调用
      YFRouterGlobleInstance.yf_clsName(@"xxxVC).yf_params(@{@"orderId":@"123456"}).yf_done();
-    // 注意：！！！ 如果传递的参数是字典，YFRouter会尝试将传递的参数中《key》值与目标VC相同名称的属性进行映射赋值，
-    // 举🌰 ： 
-    // 如果目标VC含有一个属性名称为 orderId  你传递的参数为 @{@"orderId:@"123456"},这种情况下YFRouter会直接将目标VC的orderId属性映射成 123456
+
+    // 参数获取：
+    // 往往我们传递的参数并不是所有的目标VC，都有与之对应的属性
+    // 我们可以通过下边方法直接打到传递给目标VC的所有参数
+    // 函数参数为具体的VC实例
+    // 比如你在一个具体VC中想取其他VC跳转自己的时候所传递的参数，此时 vcInstance 即为 self
+     id params = [YFRouterGlobleInstance yf_getTargetVCParams:vcInstance];
+```
+- 打开VC并注册回调
+
+```objc
+   // 常规方法调用
+  [YFRouterGlobleInstance yf_openVCWithName:@"xxxVC" andParams:nil andCallBackHandle:^(id  _Nullable callBackParams)
+    {
+        NSLog(@"xxxVC 调用回调传回来的参数 %@",callBackParams);
+    }];
+    //链式语法调用
+   YFRouterGlobleInstance.yf_clsName(@"xxxVC").yf_backHandle(^(id  _Nullable callBackParams) {
+        NSLog(@"xxxVC 调用回调传回来的参数 %@",callBackParams);
+    }).yf_done();
+  // 回调执行
+  // 执行那个VC的回调 vcInstance 则代表那个VC的实例 
+  // 回调回去的参数为id类型 可为nil 数组 字典 以及自定义model
+  [YFRouterGlobleInstance yf_executCallBackHandle:vcInstance andParams:@"这是回到回去的参数"];
+
 ```
 
 

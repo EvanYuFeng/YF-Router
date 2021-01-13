@@ -158,12 +158,21 @@
     
     switch (indexPath.row) {
         case 0:
-            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_params(@{@"orderId":@"123456"}).yf_done();
+//            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_params(@{@"orderId":@"123456"}).yf_done();
+//
+//            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_done();
+//            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName];
+//            [YFRouterGlobleInstance yf_openVCWithName:@"xxxVC" andParams:@{@"orderId":@"123456"}];
+//            [YFRouterGlobleInstance yf_getTargetVCParams:self];
             
-            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_done();
-            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName];
-            [YFRouterGlobleInstance yf_openVCWithName:@"xxxVC" andParams:@{@"orderId":@"123456"}];
-            []
+            YFRouterGlobleInstance.yf_clsName(@"xxxVC").yf_backHandle(^(id  _Nullable callBackParams) {
+                NSLog(@"xxxVC 调用回调传回来的参数 %@",callBackParams);
+            });
+            
+            [YFRouterGlobleInstance yf_openVCWithName:@"xxxVC" andParams:nil andCallBackHandle:^(id  _Nullable callBackParams)
+            {
+                            NSLog(@"xxxVC 调用回调传回来的参数 %@",callBackParams);
+            }];
             break;
         case 1:
             [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName andParams:@{
