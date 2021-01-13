@@ -5,6 +5,21 @@
 [![License](https://img.shields.io/cocoapods/l/YFRouter.svg?style=flat)](https://cocoapods.org/pods/YFRouter)
 [![Platform](https://img.shields.io/cocoapods/p/YFRouter.svg?style=flat)](https://cocoapods.org/pods/YFRouter)
 
+
+## 功能列表
+
+| 功能点              | 是否支持            | 备注                |
+| :------------------| :----:             | :----:             |
+| vc解耦              | ✔️                  | 可通过类名直接打开指定VC              |
+| 基本数据传参         | ✔️                  |  支持基本数据传递              |
+| 自定义对象传递         | ✔️                  |  支持自定义对象传递             |
+| 回调注册        | ✔️                  |  支持方法/参数回调             |
+| 链式语法调用       | ✔️                  |  支持链式语法调用            |
+
+
+## How to use
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
