@@ -89,7 +89,7 @@
             [self yf_openVCWithName:clsName andParams:params andTransitionType:transiTionsType andAnimated:animated andCallBackHandle:backHandle];
             [self.yf_chain_config removeAllObjects];
         }else{
-            YFLog(@"Specific class name must be specified when you use chain call !! please check");
+            YFLog(@"《clsName》must be given when you use chain call !! please check");
         }
     };
 }

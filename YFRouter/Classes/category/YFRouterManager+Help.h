@@ -35,4 +35,8 @@
 -(void)mapToPropertyWithParams: (NSDictionary *)params andTargetVC:(id)toVC;
 
 
+- (UIViewController *)yf_topViewController;
+- (UIViewController *)yf_topViewController:(UIViewController *)vc;
+
+
 @end

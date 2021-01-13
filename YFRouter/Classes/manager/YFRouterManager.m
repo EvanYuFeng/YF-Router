@@ -8,6 +8,7 @@
 #import "YFRouterManager.h"
 #import "YFRouterConstants.h"
 #import "YFRouterHandleCenter.h"
+#import "YFRouterUrlCenter.h"
 #import "YFRouterManager+Help.h"
 #import "YFRouterManager+Chain.h"
 
@@ -16,6 +17,7 @@
 @interface YFRouterManager()
 
 @property (nonatomic,strong) YFRouterHandleCenter *yf_handleCenter;
+@property (nonatomic,strong) YFRouterUrlCenter *yf_urlCenter ;
 
 @end
 
@@ -133,14 +135,11 @@
      }
  }
 
-///通过字符串来创建该字符串的Setter方法，并返回
  - (SEL)yf_creatSetterWithPropertyName: (NSString *) propertyName{
      propertyName =  [propertyName stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[propertyName substringToIndex:1] capitalizedString]];
      propertyName = [NSString stringWithFormat:@"set%@:", propertyName];
      return NSSelectorFromString(propertyName);
  }
-
-
 
 -(void)yf_safetySaveHandle:(NSString *)routerCode andHandle:(YFRouterHandleBlock)callBack{
     [self.yf_handleCenter registerHanleWithRouterCode:routerCode andHandle:callBack];
@@ -164,6 +163,39 @@
     targetBlock(params);
 }
 
+#pragma mark url 注册相关
+
+-(BOOL)yf_registereUrl:(NSString * _Nonnull )clsUrl toClsName:(NSString * _Nonnull)clsName{
+    return [self.yf_urlCenter yf_registereUrl:clsUrl toClsName:clsName];
+}
+
+-(BOOL)yf_openVCWithUrl:(nonnull NSString *)clsUrl{
+    return [self yf_openVCWithUrl:clsUrl andParams:nil];
+}
+
+-(BOOL)yf_openVCWithUrl:(nonnull NSString *)clsUrl
+              andParams:(_Nullable id)params{
+    return [self yf_openVCWithUrl:clsUrl andParams:params andCallBackHandle:nil];
+}
+
+-(BOOL)yf_openVCWithUrl:(nonnull NSString *)clsUrl
+            andParams:(_Nullable id)params
+      andCallBackHandle:(_Nullable YFRouterHandleBlock)callBack{
+    return [self yf_openVCWithUrl:clsUrl andParams:params andTransitionType:YF_Transitions_push andAnimated:YES andCallBackHandle:callBack];
+}
+
+-(BOOL)yf_openVCWithUrl:(nonnull NSString *)clsUrl
+            andParams:(_Nullable id)params
+    andTransitionType:(YF_Transitions_Type)transition
+          andAnimated:(BOOL)animated
+      andCallBackHandle:(_Nullable YFRouterHandleBlock)callBack{
+    if (![self.yf_urlCenter yf_getClsNameWithUrl:clsUrl]) {
+        YFLog(@" YFRouter can not open url 《%@》,because it is not be register",clsUrl);
+        return NO;
+    }
+    NSString *clsName = [self.yf_urlCenter yf_getClsNameWithUrl:clsUrl];
+    return [self yf_openVCWithName:clsName andParams:params andTransitionType:transition andAnimated:animated andCallBackHandle:callBack];
+}
 
 #pragma mark lazy load
 -(YFRouterHandleCenter *)yf_handleCenter{
@@ -172,31 +204,11 @@
     }
     return _yf_handleCenter;
 }
-
-
-- (UIViewController *)yf_topViewController {
-    UIViewController *resultVC;
-    resultVC = [self yf_topViewController:[[UIApplication sharedApplication].keyWindow rootViewController]];
-    while (resultVC.presentedViewController) {
-        resultVC = [self yf_topViewController:resultVC.presentedViewController];
+-(YFRouterUrlCenter *)yf_urlCenter{
+    if (!_yf_urlCenter) {
+        _yf_urlCenter = [[YFRouterUrlCenter alloc]init];
     }
-    return resultVC;
+    return _yf_urlCenter;
 }
-
-- (UIViewController *)yf_topViewController:(UIViewController *)vc {
-    if ([vc isKindOfClass:[UINavigationController class]]) {
-        return [self yf_topViewController:[(UINavigationController *)vc topViewController]];
-    } else if ([vc isKindOfClass:[UITabBarController class]]) {
-        return [self yf_topViewController:[(UITabBarController *)vc selectedViewController]];
-    } else {
-        return vc;
-    }
-    return nil;
-}
-
-
-
-
-
 
 @end

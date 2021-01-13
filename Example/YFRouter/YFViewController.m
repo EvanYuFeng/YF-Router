@@ -158,25 +158,20 @@
     
     switch (indexPath.row) {
         case 0:
-//            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_params(@{@"orderId":@"123456"}).yf_done();
-//
+//            链式调用
 //            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_done();
+            YFRouterGlobleInstance.yf_params(@"123456").yf_done();
 //            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName];
-//            [YFRouterGlobleInstance yf_openVCWithName:@"xxxVC" andParams:@{@"orderId":@"123456"}];
-//            [YFRouterGlobleInstance yf_getTargetVCParams:self];
-            
-            YFRouterGlobleInstance.yf_clsName(@"xxxVC").yf_transitionsType(YF_Transitions_present).yf_animated(YES).yf_done();
-            
-            [YFRouterGlobleInstance yf_openVCWithName:@"xxxVC" andParams:nil andCallBackHandle:^(id  _Nullable callBackParams)
-            {
-                            NSLog(@"xxxVC 调用回调传回来的参数 %@",callBackParams);
-            }];
             break;
         case 1:
-            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName andParams:@{
+//            链式调用
+            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_params(@{
                 @"params1":@"value1",
-                @"params2":@"value2",
-            }];
+                @"params2":@"value2",}).yf_done();
+//            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName andParams:@{
+//                @"params1":@"value1",
+//                @"params2":@"value2",
+//            }];
             break;
         case 2:
             [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName andParams:@[@"value1",@"value2"]];
