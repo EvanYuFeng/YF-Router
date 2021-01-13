@@ -63,6 +63,18 @@
 
 ```
 
+- 指定打开VC的方式
+
+```objc
+  /// yf_transitionsType 参数为一个枚举 目前只支持两种 push present
+  /// yf_animated 指定转场是否需要动画
+  /// 链式调用语法糖
+  YFRouterGlobleInstance.yf_clsName(@"xxxVC").yf_transitionsType(YF_Transitions_present).yf_animated(YES).yf_done();
+  ///这里常规方法调用不在举例
+  ///链式调用可以更加灵活的 配置要打开VC的动作 传参or不传 有回调or没有 等。 
+  ///注意！！ 链式调用最后必须执行 yf_done() 结束语，不然YFRouter并不知道你的跳转配置项是否结束，所以不会发起跳转。
+```
+
 
 ## Example
 
