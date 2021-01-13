@@ -158,10 +158,12 @@
     
     switch (indexPath.row) {
         case 0:
-              YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_animated(NO).yf_done();
+            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_params(@{@"orderId":@"123456"}).yf_done();
             
             YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_done();
             [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName];
+            [YFRouterGlobleInstance yf_openVCWithName:@"xxxVC" andParams:@{@"orderId":@"123456"}];
+            []
             break;
         case 1:
             [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName andParams:@{

@@ -18,13 +18,23 @@
 
 
 ## How to use
-- 直接打开目标VC 不带参数 不带回调
-    ```Object-C
-    <!-- 常规方法调用 -->
+- 直接打开目标VC 
+```objc
+    // 常规方法调用
     [YFRouterGlobleInstance yf_openVCWithName:@"xxxVC"];
-     <!-- 语法糖 -->
+    // 链式语法调用
      YFRouterGlobleInstance.yf_clsName(@"xxxVC").yf_done();
-    ```
+```
+- 直接打开目标VC 带参数 
+```objc
+    // 常规方法调用
+     [YFRouterGlobleInstance yf_openVCWithName:@"xxxVC" andParams:@{@"orderId":@"123456"}];
+    // 链式语法调用
+     YFRouterGlobleInstance.yf_clsName(@"xxxVC).yf_params(@{@"orderId":@"123456"}).yf_done();
+    // 注意：！！！ 如果传递的参数是字典，YFRouter会尝试将传递的参数中《key》值与目标VC相同名称的属性进行映射赋值，
+    // 举🌰 ： 
+    // 如果目标VC含有一个属性名称为 orderId  你传递的参数为 @{@"orderId:@"123456"},这种情况下YFRouter会直接将目标VC的orderId属性映射成 123456
+```
 
 
 ## Example
