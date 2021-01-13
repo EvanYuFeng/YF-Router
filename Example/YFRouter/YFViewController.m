@@ -158,8 +158,10 @@
     
     switch (indexPath.row) {
         case 0:
-            [YFRouterManager shareInstance].yf_clsName(model.targetVcName).yf_animated(NO).yf_done();
-//            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName];
+              YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_animated(NO).yf_done();
+            
+            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_done();
+            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName];
             break;
         case 1:
             [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName andParams:@{

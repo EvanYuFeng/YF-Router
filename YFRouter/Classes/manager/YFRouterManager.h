@@ -12,6 +12,8 @@
 
 
 
+#define YFRouterGlobleInstance [YFRouterManager shareInstance]
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YFRouterManager : NSObject

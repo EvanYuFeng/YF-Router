@@ -18,6 +18,13 @@
 
 
 ## How to use
+- 直接打开目标VC 不带参数 不带回调
+    ```Object-C
+    <!-- 常规方法调用 -->
+    [YFRouterGlobleInstance yf_openVCWithName:@"xxxVC"];
+     <!-- 语法糖 -->
+     YFRouterGlobleInstance.yf_clsName(@"xxxVC").yf_done();
+    ```
 
 
 ## Example
