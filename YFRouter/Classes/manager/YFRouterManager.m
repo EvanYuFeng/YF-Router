@@ -200,8 +200,12 @@
         YFLog(@" YFRouter can not open url 《%@》,because it is not be register",clsUrl);
         return NO;
     }
-    NSString *clsName = [self.yf_urlCenter yf_getClsNameWithUrl:clsUrl];
+    NSString *clsName = [self yf_getClsNameWithUrl:clsUrl];
     return [self yf_openVCWithName:clsName andParams:params andTransitionType:transition andAnimated:animated andCallBackHandle:callBack];
+}
+
+-(NSString * )yf_getClsNameWithUrl:(NSString * )url{
+    return [self.yf_urlCenter yf_getClsNameWithUrl:url];
 }
 
 -(void)setYf_hook_handle:(YFRouterHookHandleBlock _Nonnull)yf_hook_handle{

@@ -92,11 +92,8 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'YFRouter'
 ```
-
 ## Author
-
-iosyufeng@sina.com, iosyufeng@sina.com
-
+reactfeng@gmail.com
 ## License
 
 YFRouter is available under the MIT license. See the LICENSE file for more info.

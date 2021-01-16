@@ -149,6 +149,9 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)setYf_hook_handle:(YFRouterHookHandleBlock _Nonnull)yf_hook_handle;
 
 
+-(NSString * )yf_getClsNameWithUrl:(NSString * )url;
+
+
 
 
 @end
