@@ -15,15 +15,8 @@
 
 
 @interface YFRouterManager()
-
 @property (nonatomic,strong) YFRouterHandleCenter *yf_handleCenter;
 @property (nonatomic,strong) YFRouterUrlCenter *yf_urlCenter ;
-
-
-
-
-
-
 @end
 
 @implementation YFRouterManager
@@ -34,6 +27,8 @@
     dispatch_once(&onceToken, ^{
         if (k_instance_singleton == nil) {
             k_instance_singleton = [[YFRouterManager alloc] init];
+//          默认开启打印log
+            k_instance_singleton.isLog = true;
 //          初始化链式调用的字典
             [k_instance_singleton setYf_chain_config:[NSMutableDictionary new]];
         }

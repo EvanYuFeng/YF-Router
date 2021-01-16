@@ -67,7 +67,9 @@
     [self.navigationItem setTitle:@"YFRouter demo"];
     [self createData];
     [self setUpView];
-    
+
+//    设置全局关闭log
+//   [[YFRouterManager shareInstance]setIsLog:NO];
 //   设置全局路由hook
     [YFRouterGlobleInstance setYf_hook_handle:^(NSString * _Nullable clsName, id  _Nullable params) {
         YFLog(@"拦截到的VC类名《%@》，参数《%@》",clsName,params);

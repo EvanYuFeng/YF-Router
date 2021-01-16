@@ -12,13 +12,15 @@
 
 
 
-#define YFRouterGlobleInstance [YFRouterManager shareInstance]
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YFRouterManager : NSObject
 
 @property (nonatomic,copy) YFRouterHookHandleBlock yf_hook_handle;
+// sdk 打印开关
+@property (nonatomic,assign) BOOL isLog;
 
 +(YFRouterManager *)shareInstance;
 +(instancetype) alloc __attribute__((unavailable("call sharedInstance instead")));
