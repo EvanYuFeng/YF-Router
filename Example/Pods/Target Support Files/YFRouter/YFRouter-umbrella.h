@@ -18,6 +18,7 @@
 #import "YFRouterHandleCenter.h"
 #import "YFRouterManager.h"
 #import "YFRouterSlotData.h"
+#import "YFRouterUrlCenter.h"
 
 FOUNDATION_EXPORT double YFRouterVersionNumber;
 FOUNDATION_EXPORT const unsigned char YFRouterVersionString[];

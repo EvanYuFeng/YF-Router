@@ -19,6 +19,11 @@
 @property (nonatomic,strong) YFRouterHandleCenter *yf_handleCenter;
 @property (nonatomic,strong) YFRouterUrlCenter *yf_urlCenter ;
 
+
+
+
+
+
 @end
 
 @implementation YFRouterManager
@@ -101,6 +106,8 @@
     [toVC setYf_routerSoletData:toVCSlotData];
 //  尝试将参数动态映射到目标VC上
     [self yf_tryToMapParams:params toTargetVC:toVC];
+//  执行hook如果存在的话
+    if (self.yf_hook_handle) self.yf_hook_handle(clsName, params);
     return toVC;
 }
 
@@ -195,6 +202,10 @@
     }
     NSString *clsName = [self.yf_urlCenter yf_getClsNameWithUrl:clsUrl];
     return [self yf_openVCWithName:clsName andParams:params andTransitionType:transition andAnimated:animated andCallBackHandle:callBack];
+}
+
+-(void)setYf_hook_handle:(YFRouterHookHandleBlock _Nonnull)yf_hook_handle{
+    _yf_hook_handle = yf_hook_handle;
 }
 
 #pragma mark lazy load

@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YFRouterManager : NSObject
 
+@property (nonatomic,copy) YFRouterHookHandleBlock yf_hook_handle;
+
 +(YFRouterManager *)shareInstance;
 +(instancetype) alloc __attribute__((unavailable("call sharedInstance instead")));
 +(instancetype) new __attribute__((unavailable("call sharedInstance instead")));
@@ -115,6 +117,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 // --------------------------------------------------------------------------------------------- //
 #pragma mark 以下通用方法
+
+
+/// 通过传入参数创建vc实例
+/// @param clsName vc类名称
+/// @param params 带给目标VC的参数
+/// @param callBack  回调
+-(UIViewController * _Nullable)yf_createVCWithClassName:(nonnull NSString *)clsName andParams:(_Nullable id)params andCallBackHandle:(_Nullable YFRouterHandleBlock)callBack;
+
+
 /// 清除对应routerCode 的相关信息
 /// @param routerCode 路由VC唯一标识
 /// 注意：目前此方法只是库内部使用 不建议开发者主动去清楚
@@ -130,6 +141,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// 获取目标VC 绑定的参数
 /// @param targetVC 目标VC实例
 -(_Nonnull id)yf_getTargetVCParams:(_Nonnull id)targetVC;
+
+
+/// hook 函数 全局设置 此函数会在目标vc创建成功后执行
+/// 可用于全局拦截vc跳转的函数，在vc即将跳转之前做一些事情
+/// @param yf_hook_handle hook block
+-(void)setYf_hook_handle:(YFRouterHookHandleBlock _Nonnull)yf_hook_handle;
+
+
 
 
 @end

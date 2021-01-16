@@ -19,6 +19,8 @@
 #define  KKYFRouterCodelength 32
 typedef void(^YFRouterHandleBlock)(_Nullable id callBackParams);
 
+typedef void(^YFRouterHookHandleBlock)( NSString * _Nullable  clsName, _Nullable id params);
+
 
 // 转场类型
 typedef NS_ENUM(NSInteger, YF_Transitions_Type) {

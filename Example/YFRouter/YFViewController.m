@@ -67,60 +67,18 @@
     [self.navigationItem setTitle:@"YFRouter demo"];
     [self createData];
     [self setUpView];
-//    [self addbutton];
-	
-    // Do any additional setup after loading the view, typically from a nib.
+    
+//   设置全局路由hook
+    [YFRouterGlobleInstance setYf_hook_handle:^(NSString * _Nullable clsName, id  _Nullable params) {
+        YFLog(@"拦截到的VC类名《%@》，参数《%@》",clsName,params);
+    }];
 }
 -(void)setUpView{
     [self.view addSubview:self.yf_tableView];
 }
 
--(UITableView *)yf_tableView{
-    if (!_yf_tableView) {
-        _yf_tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
-        _yf_tableView.delegate = self;
-        _yf_tableView.dataSource = self;
-    }
-    return _yf_tableView;
-}
-- (NSMutableArray *)yf_table_data{
-    if (!_yf_table_data) {
-        _yf_table_data = [NSMutableArray new];
-    }
-    return _yf_table_data;
-}
--(void)addbutton{
-    UIButton * toTempABtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [toTempABtn setFrame:CGRectMake(0, 0 , 100, 50)];
-    toTempABtn.center = self.view.center;
-    [toTempABtn setTitle:@"jumpToTempb" forState:UIControlStateNormal];
-    [toTempABtn addTarget:self action:@selector(jumpTempA:) forControlEvents:UIControlEventTouchUpInside];
-    [toTempABtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [self.view addSubview:toTempABtn];
-}
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-- (void)jumpTempA:(id)sender {
-    YFTestModel * testModel = [[YFTestModel alloc]initWithName:@"自动testModel" andDataArr:@[
-        @"数组值1",
-        @"数组值2",
-    ]];
 
-    NSDictionary * params = @{
-        @"tempAParmas":@"123456",
-        @"age":@"这是年龄参数",
-        @"testModel":testModel
-    };
-    
-//    bool canPush =   [[YFRouterManager shareInstance]yf_openVCWithName:@"TempAVC"];
-    bool canPush = [[YFRouterManager shareInstance]yf_openVCWithName:@"TempAVC" andParams:@"这是带的参数"];
-    if (canPush) {
-        NSLog(@"push成功");
-    }
-}
+
 
 #pragma mark tableView--delegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -159,40 +117,50 @@
     switch (indexPath.row) {
         case 0:
 //            链式调用
-//            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_done();
-            YFRouterGlobleInstance.yf_params(@"123456").yf_done();
+            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_done();
+//            常规调用
 //            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName];
             break;
         case 1:
-//            链式调用
+//            链式调用 参数字典
             YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_params(@{
                 @"params1":@"value1",
                 @"params2":@"value2",}).yf_done();
+//            常规调用
 //            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName andParams:@{
 //                @"params1":@"value1",
 //                @"params2":@"value2",
 //            }];
             break;
         case 2:
-            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName andParams:@[@"value1",@"value2"]];
+//            链式调用 参数数组
+            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_params(@[@"value1",@"value2"]).yf_done();
+//          常规用法
+//            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName andParams:@[@"value1",@"value2"]];
             break;
         case 3:
-            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName andParams:testModel];
+//           链式调用 参数自定义模型
+            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_params(testModel).yf_done();
+//           常规用法
+//            [YFRouterGlobleInstance yf_openVCWithName:model.targetVcName andParams:testModel];
             break;
         case 4:
-            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName
-                                                     andParams:testModel
-                                             andCallBackHandle:^(id  _Nullable callBackParams) {
-                YFLog(@"执行了回调 \n 回调参数 %@",callBackParams);
-            }];
+            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_params(testModel).yf_backHandle(^(id  _Nullable callBackParams) {
+                YFLog(@"执行了回调  回调参数:\n %@",callBackParams);
+            }).yf_done();
+//            [YFRouterGlobleInstance yf_openVCWithName:model.targetVcName
+//                                                     andParams:testModel
+//                                             andCallBackHandle:^(id  _Nullable callBackParams) {
+//                YFLog(@"执行了回调 \n 回调参数 %@",callBackParams);
+//            }];
             break;
         case 5:
-            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName andParams:testModel andTransitionType:YF_Transitions_present andAnimated:YES andCallBackHandle:^(id  _Nullable callBackParams) {
-                YFLog(@"执行了回调 \n 回调参数 %@",callBackParams);
+            [YFRouterGlobleInstance yf_openVCWithName:model.targetVcName andParams:testModel andTransitionType:YF_Transitions_present andAnimated:YES andCallBackHandle:^(id  _Nullable callBackParams) {
+                YFLog(@"执行了回调  回调参数: \n %@",callBackParams);
             }];
             break;
         default:
-            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName];
+            [YFRouterGlobleInstance yf_openVCWithName:model.targetVcName];
             break;
     }
     
@@ -211,19 +179,19 @@
         },
 //        1
         @{
-            @"title":@"常规push 带参数",
+            @"title":@"常规push 带参数 字典",
             @"targetVcName":@"TempAVC",
             @"des":@"常规push，带参数，参数字典类型，注意log !!!"
         },
 //        2
         @{
-            @"title":@"常规push 带参数",
+            @"title":@"常规push 带参数 数组",
             @"targetVcName":@"TempAVC",
-            @"des":@"常规push，带参数，参数字典数组，注意log !!!"
+            @"des":@"常规push，带参数，参数数组类型，注意log !!!"
         },
 //        3
         @{
-            @"title":@"常规push 带参数",
+            @"title":@"常规push 带参数 自定义模型",
             @"targetVcName":@"TempAVC",
             @"des":@"常规push，带参数，参数为自定义model，注意log ！！！"
         },
@@ -246,6 +214,22 @@
         CellModel * model = [[CellModel alloc]initWithDict:dict];
         [self.yf_table_data addObject:model];
     }
+}
+
+
+-(UITableView *)yf_tableView{
+    if (!_yf_tableView) {
+        _yf_tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _yf_tableView.delegate = self;
+        _yf_tableView.dataSource = self;
+    }
+    return _yf_tableView;
+}
+- (NSMutableArray *)yf_table_data{
+    if (!_yf_table_data) {
+        _yf_table_data = [NSMutableArray new];
+    }
+    return _yf_table_data;
 }
 
 @end

@@ -93,4 +93,33 @@
         }
     };
 }
+
+-(YF_getvc_block)yf_getvc{
+    return (id)^{
+        NSMutableDictionary * chainConfig = self.yf_chain_config;
+        if (self.yf_chain_config[yf_chain_cls_name]) {
+            NSString * clsName = self.yf_chain_config[yf_chain_cls_name];
+            id params = self.yf_chain_config[yf_chain_params];
+            YF_Transitions_Type transiTionsType = [self.yf_chain_config[yf_chain_transition_type] intValue];
+            BOOL animated ;
+            if (self.yf_chain_config[yf_chain_animated] == nil) {
+                animated = YES;
+            }else{
+                if ( [self.yf_chain_config[yf_chain_animated] integerValue] == 0) {
+                    animated = NO;
+                }else{
+                    animated = YES;
+                }
+            }
+            YFRouterHandleBlock backHandle = self.yf_chain_config[yf_chain_back_handle];
+            [self yf_openVCWithName:clsName andParams:params andTransitionType:transiTionsType andAnimated:animated andCallBackHandle:backHandle];
+         
+            [self.yf_chain_config removeAllObjects];
+            return nil;
+        }else{
+            YFLog(@"《clsName》must be given when you use chain call !! please check");
+            return nil;
+        }
+    };
+}
 @end
