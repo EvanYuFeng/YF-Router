@@ -11,12 +11,15 @@
 #import "YFRouterUrlCenter.h"
 #import "YFRouterManager+Help.h"
 #import "YFRouterManager+Chain.h"
+#import "YFUrlComponent.h"
 
-
+#define yf_root_url_component_key @"yf_root_url_component_key"
 
 @interface YFRouterManager()
 @property (nonatomic,strong) YFRouterHandleCenter *yf_handleCenter;
 @property (nonatomic,strong) YFRouterUrlCenter *yf_urlCenter ;
+// vc创建之后 push之前执行的hook
+@property (nonatomic,copy) YFRouterHookHandleBlock yf_hook_handle;
 @end
 
 @implementation YFRouterManager
@@ -34,6 +37,14 @@
         }
     });
     return (YFRouterManager *)k_instance_singleton;
+}
+
+-(instancetype)init{
+    if (self = [super init]) {
+        _yf_root_url_component = [[YFUrlComponent alloc]init];
+        _yf_root_url_component.yf_componentKey = yf_root_url_component_key;
+    }
+    return self;
 }
 
 
@@ -165,47 +176,7 @@
     targetBlock(params);
 }
 
-#pragma mark url 注册相关
 
--(BOOL)yf_registereUrl:(NSString * _Nonnull )clsUrl toClsName:(NSString * _Nonnull)clsName{
-    return [self.yf_urlCenter yf_registereUrl:clsUrl toClsName:clsName];
-}
-
--(BOOL)yf_openVCWithUrl:(nonnull NSString *)clsUrl{
-    return [self yf_openVCWithUrl:clsUrl andParams:nil];
-}
-
--(BOOL)yf_openVCWithUrl:(nonnull NSString *)clsUrl
-              andParams:(_Nullable id)params{
-    return [self yf_openVCWithUrl:clsUrl andParams:params andCallBackHandle:nil];
-}
-
--(BOOL)yf_openVCWithUrl:(nonnull NSString *)clsUrl
-            andParams:(_Nullable id)params
-      andCallBackHandle:(_Nullable YFRouterHandleBlock)callBack{
-    return [self yf_openVCWithUrl:clsUrl andParams:params andTransitionType:YF_Transitions_push andAnimated:YES andCallBackHandle:callBack];
-}
-
--(BOOL)yf_openVCWithUrl:(nonnull NSString *)clsUrl
-            andParams:(_Nullable id)params
-    andTransitionType:(YF_Transitions_Type)transition
-          andAnimated:(BOOL)animated
-      andCallBackHandle:(_Nullable YFRouterHandleBlock)callBack{
-    if (![self.yf_urlCenter yf_getClsNameWithUrl:clsUrl]) {
-        YFLog(@" YFRouter can not open url 《%@》,because it is not be register",clsUrl);
-        return NO;
-    }
-    NSString *clsName = [self yf_getClsNameWithUrl:clsUrl];
-    return [self yf_openVCWithName:clsName andParams:params andTransitionType:transition andAnimated:animated andCallBackHandle:callBack];
-}
-
--(NSString * )yf_getClsNameWithUrl:(NSString * )url{
-    return [self.yf_urlCenter yf_getClsNameWithUrl:url];
-}
-
--(void)setYf_hook_handle:(YFRouterHookHandleBlock _Nonnull)yf_hook_handle{
-    _yf_hook_handle = yf_hook_handle;
-}
 
 #pragma mark lazy load
 -(YFRouterHandleCenter *)yf_handleCenter{
@@ -221,4 +192,12 @@
     return _yf_urlCenter;
 }
 
+
+-(YFUrlComponent *)yf_root_url_component{
+    if (!_yf_root_url_component) {
+        _yf_root_url_component = [[YFUrlComponent alloc]init];
+        _yf_root_url_component.yf_componentKey = yf_root_url_component_key;
+    }
+    return _yf_root_url_component;
+}
 @end

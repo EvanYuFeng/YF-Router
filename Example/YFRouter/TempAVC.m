@@ -52,8 +52,21 @@
 }
 
 - (IBAction)excutCallBack:(id)sender {
-    [YFRouterGlobleInstance yf_executCallBackHandle:self andParams:@"这是回调回去的参数(这里可以换成任意数据类型)"];
-    [self showText:@"请注意log打印！"];
+//    [YFRouterGlobleInstance yf_executCallBackHandle:self andParams:@"这是回调回去的参数(这里可以换成任意数据类型)"];
+//    [self showText:@"请注意log打印！"];
+    
+    for (NSInteger index = 0; index < 20; index++) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            [YFRouterGlobleInstance yf_registereUrl:[NSString stringWithFormat:@"url-%ld",index]
+//                                          toClsName:[NSString stringWithFormat:@"clsName-%ld",index]];
+            [YFRouterGlobleInstance yf_getClsNameWithUrl:[NSString stringWithFormat:@"url-%ld",index]];
+            [NSThread sleepForTimeInterval:index % 2 == 0?2:1];
+        
+        });
+        if (index == 10) {
+            [YFRouterGlobleInstance yf_registereUrl:@"中间插入" toClsName:@"中间插入class"];
+        }
+    }
 }
 
 -(void)showText:(NSString *)test{

@@ -22,7 +22,9 @@
 }
 
 -(void)dealloc{
-    [[YFRouterManager shareInstance] yf_clearRouterInfoWithRouterCode:_routerCode];
+    [YFRouterGlobleInstance performSelectorOnMainThread:@selector(yf_clearRouterInfoWithRouterCode:)
+                                             withObject:_routerCode
+                                          waitUntilDone:[NSThread isMainThread]];
     YFLog(@"\n%@ 's soltData is dealloc \n %@",_clsName,[self toString]);
 }
 

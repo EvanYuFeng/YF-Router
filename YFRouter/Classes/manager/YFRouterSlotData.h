@@ -15,8 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly)  id params;
 
 -(instancetype)initWithClsName:(NSString *)clsName andRouterCode:(NSString *)routerCode andParams:(_Nullable id)params;
-
-
 -(NSString * )toString;
 @end
 

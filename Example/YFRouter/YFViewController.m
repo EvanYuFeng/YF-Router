@@ -74,6 +74,18 @@
     [YFRouterGlobleInstance setYf_hook_handle:^(NSString * _Nullable clsName, id  _Nullable params) {
         YFLog(@"拦截到的VC类名《%@》，参数《%@》",clsName,params);
     }];
+    
+    
+    
+//    for (NSInteger index = 0; index < 20; index++) {
+//
+//       NSInteger  tempIndex = index;
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            [YFRouterGlobleInstance yf_registereUrl:[NSString stringWithFormat:@"url-%ld",tempIndex]
+//                                          toClsName:[NSString stringWithFormat:@"clsName-%ld",tempIndex]];
+//        });
+//    }
+    
 }
 -(void)setUpView{
     [self.view addSubview:self.yf_tableView];
@@ -118,8 +130,9 @@
     
     switch (indexPath.row) {
         case 0:
+            [self testUrl];
 //            链式调用
-            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_done();
+//            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_done();
 //            常规调用
 //            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName];
             break;
@@ -232,6 +245,69 @@
         _yf_table_data = [NSMutableArray new];
     }
     return _yf_table_data;
+}
+
+
+-(void)testUrl{
+    
+    NSString *exampUrl1 = @"aa.bb.com://detailPageA/list/:orderId";
+    NSString *exampUrl2 = @"aa.bb.com://detailPageA/:orderId";
+    NSString *exampUrl3 = @"http://aa.bb.com/detailPageA/list/:orderId";
+    
+    NSString *openUrl = @"aa.bb.com://detailPageA/list/123456?param1=value1&param2=value2&params3?";
+    
+    [YFRouterGlobleInstance yf_registereUrl:exampUrl1 toClsName:@"TempAVC"];
+    [YFRouterGlobleInstance yf_registereUrl:exampUrl2 toClsName:@"TempBVC"];
+    
+    [YFRouterGlobleInstance yf_openVCWithUrl:openUrl];
+    
+    
+//    NSURL * url1 = [NSURL URLWithString:exampUrl1];
+//    NSURL * url3 = [NSURL URLWithString:exampUrl3];
+//
+//
+//
+//    NSLog(@"scheme-->%@",url1.scheme);
+//    NSLog(@"host--->%@",url1.host);
+//    NSLog(@"aburl-->%@",url1.resourceSpecifier);
+//    NSLog(@"%@",url1.query);
+//    NSLog(@"path-->%@",url1.path);
+//    NSLog(@"%@",url1.fragment);
+//
+//    NSLog(@"scheme-->%@",url3.scheme);
+//    NSLog(@"host--->%@",url3.host);
+//
+//   NSDictionary *paramsA =  [self getQueryParams:@"aabb.cc.dd"];
+//    NSLog(@"%@",paramsA);
+//
+//    [self parseUrl:@"aabbcc://www.com"];
+}
+
+-(NSDictionary * )parseUrl:(NSString *)url{
+    NSMutableDictionary * urlDict = [NSMutableDictionary new];
+  
+//  获取query参数
+    NSDictionary * queryParams = [self getQueryParams:url];
+    
+    NSLog(@"%@",queryParams);
+    
+    NSArray * allUrlComponent = [url substringToIndex:@"?"];
+    
+    
+    
+    
+    return nil;
+}
+
+-(NSDictionary *)getQueryParams:(NSString *)url{
+    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:url];
+    NSMutableDictionary * paramer = [NSMutableDictionary new];
+    //遍历所有参数，添加入字典
+    [urlComponents.queryItems enumerateObjectsUsingBlock:^(NSURLQueryItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [paramer setObject:obj.value forKey:obj.name];
+    }];
+    NSLog(@"queryParams--->%@",paramer);
+    return paramer;
 }
 
 @end
