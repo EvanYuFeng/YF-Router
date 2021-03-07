@@ -5,12 +5,12 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - MBProgressHUD (1.2.0)
-  - YFRouter (0.1.0)
+  - YF-Router (0.1.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
   - MBProgressHUD (~> 1.2.0)
-  - YFRouter (from `../`)
+  - YF-Router (from `../`)
 
 SPEC REPOS:
   trunk:
@@ -18,14 +18,14 @@ SPEC REPOS:
     - MBProgressHUD
 
 EXTERNAL SOURCES:
-  YFRouter:
+  YF-Router:
     :path: "../"
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  YFRouter: 53f343583dd30b1e2a8b2646286f03805f804f54
+  YF-Router: 7e8db8a6e2c810107d89a8600a8f7a07ffc6b421
 
-PODFILE CHECKSUM: cdb97465e509f3fe5fded09e9afecade106e8c73
+PODFILE CHECKSUM: af7a4f5c7016ed3bd9cb3c2ab57d7db4c4976ad3
 
 COCOAPODS: 1.10.0
