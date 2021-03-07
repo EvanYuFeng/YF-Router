@@ -1,0 +1,6 @@
+framework module YF_Router {
+  umbrella header "YF-Router-umbrella.h"
+
+  export *
+  module * { export * }
+}
