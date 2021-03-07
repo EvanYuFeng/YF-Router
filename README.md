@@ -19,7 +19,7 @@
 | 通过url打开VC       | ✔️                  |  支持通过url打开响应注册的VC           |
 
 
-## How to use
+## 如何使用
 - 直接打开目标VC 
 ```objc
     // 常规方法调用
@@ -28,7 +28,7 @@
      YFRouterGlobleInstance.yf_clsName(@"xxxVC").yf_done();
 ```
 
-- 直接打开目标VC 带参数 
+## - 直接打开目标VC 带参数 
 ```objc
     // 注意：！！！ 如果传递的参数是字典，YFRouter会尝试将传递的参数中《key》值与目标VC相同名称的属性进行映射赋值，
     // 举🌰 ： 
@@ -46,7 +46,7 @@
     // 比如你在一个具体VC中想取其他VC跳转自己的时候所传递的参数，此时 vcInstance 即为 self
      id params = [YFRouterGlobleInstance yf_getTargetVCParams:vcInstance];
 ```
-- 打开VC并注册回调
+## - 打开VC并注册回调
 
 ```objc
    // 常规方法调用
@@ -65,7 +65,7 @@
 
 ```
 
-- 指定打开VC的方式
+## - 指定打开VC的方式
 
 ```objc
   /// yf_transitionsType 参数为一个枚举 目前只支持两种 push present
@@ -76,6 +76,14 @@
   ///链式调用可以更加灵活的 配置要打开VC的动作 传参or不传 有回调or没有 等。 
   ///注意！！ 链式调用最后必须执行 yf_done() 结束语，不然YFRouter并不知道你的跳转配置项是否结束，所以不会发起跳转。
 ```
+
+## - 关于sdk log打印
+
+```objc
+//设置全局关闭log - 默认debug模式开启 release自动关闭
+[[YFRouterManager shareInstance]setIsLog:NO];
+```
+
 
 
 ## Example
@@ -89,14 +97,13 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 YFRouter is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
+## 
+
 ```ruby
 pod 'YFRouter'
 ```
-
 ## Author
-
-iosyufeng@sina.com, iosyufeng@sina.com
-
+reactfeng@gmail.com
 ## License
 
 YFRouter is available under the MIT license. See the LICENSE file for more info.

@@ -11,14 +11,15 @@
 #import "YFRouterUrlCenter.h"
 #import "YFRouterManager+Help.h"
 #import "YFRouterManager+Chain.h"
+#import "YFUrlComponent.h"
 
-
+#define yf_root_url_component_key @"yf_root_url_component_key"
 
 @interface YFRouterManager()
-
 @property (nonatomic,strong) YFRouterHandleCenter *yf_handleCenter;
 @property (nonatomic,strong) YFRouterUrlCenter *yf_urlCenter ;
-
+// vc创建之后 push之前执行的hook
+@property (nonatomic,copy) YFRouterHookHandleBlock yf_hook_handle;
 @end
 
 @implementation YFRouterManager
@@ -29,11 +30,21 @@
     dispatch_once(&onceToken, ^{
         if (k_instance_singleton == nil) {
             k_instance_singleton = [[YFRouterManager alloc] init];
+//          默认开启打印log
+            k_instance_singleton.isLog = true;
 //          初始化链式调用的字典
             [k_instance_singleton setYf_chain_config:[NSMutableDictionary new]];
         }
     });
     return (YFRouterManager *)k_instance_singleton;
+}
+
+-(instancetype)init{
+    if (self = [super init]) {
+        _yf_root_url_component = [[YFUrlComponent alloc]init];
+        _yf_root_url_component.yf_componentKey = yf_root_url_component_key;
+    }
+    return self;
 }
 
 
@@ -101,6 +112,8 @@
     [toVC setYf_routerSoletData:toVCSlotData];
 //  尝试将参数动态映射到目标VC上
     [self yf_tryToMapParams:params toTargetVC:toVC];
+//  执行hook如果存在的话
+    if (self.yf_hook_handle) self.yf_hook_handle(clsName, params);
     return toVC;
 }
 
@@ -163,39 +176,7 @@
     targetBlock(params);
 }
 
-#pragma mark url 注册相关
 
--(BOOL)yf_registereUrl:(NSString * _Nonnull )clsUrl toClsName:(NSString * _Nonnull)clsName{
-    return [self.yf_urlCenter yf_registereUrl:clsUrl toClsName:clsName];
-}
-
--(BOOL)yf_openVCWithUrl:(nonnull NSString *)clsUrl{
-    return [self yf_openVCWithUrl:clsUrl andParams:nil];
-}
-
--(BOOL)yf_openVCWithUrl:(nonnull NSString *)clsUrl
-              andParams:(_Nullable id)params{
-    return [self yf_openVCWithUrl:clsUrl andParams:params andCallBackHandle:nil];
-}
-
--(BOOL)yf_openVCWithUrl:(nonnull NSString *)clsUrl
-            andParams:(_Nullable id)params
-      andCallBackHandle:(_Nullable YFRouterHandleBlock)callBack{
-    return [self yf_openVCWithUrl:clsUrl andParams:params andTransitionType:YF_Transitions_push andAnimated:YES andCallBackHandle:callBack];
-}
-
--(BOOL)yf_openVCWithUrl:(nonnull NSString *)clsUrl
-            andParams:(_Nullable id)params
-    andTransitionType:(YF_Transitions_Type)transition
-          andAnimated:(BOOL)animated
-      andCallBackHandle:(_Nullable YFRouterHandleBlock)callBack{
-    if (![self.yf_urlCenter yf_getClsNameWithUrl:clsUrl]) {
-        YFLog(@" YFRouter can not open url 《%@》,because it is not be register",clsUrl);
-        return NO;
-    }
-    NSString *clsName = [self.yf_urlCenter yf_getClsNameWithUrl:clsUrl];
-    return [self yf_openVCWithName:clsName andParams:params andTransitionType:transition andAnimated:animated andCallBackHandle:callBack];
-}
 
 #pragma mark lazy load
 -(YFRouterHandleCenter *)yf_handleCenter{
@@ -211,4 +192,12 @@
     return _yf_urlCenter;
 }
 
+
+-(YFUrlComponent *)yf_root_url_component{
+    if (!_yf_root_url_component) {
+        _yf_root_url_component = [[YFUrlComponent alloc]init];
+        _yf_root_url_component.yf_componentKey = yf_root_url_component_key;
+    }
+    return _yf_root_url_component;
+}
 @end

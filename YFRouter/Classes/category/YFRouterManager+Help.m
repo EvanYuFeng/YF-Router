@@ -87,5 +87,14 @@
     return nil;
 }
 
+-(UINavigationController *)yf_topNavController:(UIViewController *)vc{
+    if ([vc isKindOfClass:[UINavigationController class]]) {
+        return vc;
+    } else if ([vc isKindOfClass:[UITabBarController class]]) {
+        return [self yf_topViewController:[(UITabBarController *)vc selectedViewController]];
+    }
+    return nil;
+}
+
 
 @end

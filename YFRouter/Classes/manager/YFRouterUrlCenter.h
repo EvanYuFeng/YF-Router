@@ -11,9 +11,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YFRouterUrlCenter : NSObject
 
-@property (nonatomic,strong) NSMutableDictionary *yf_urlData;
-
-
 /// 通过url注册class
 /// @param clsUrl url
 /// @param clsName 类名称

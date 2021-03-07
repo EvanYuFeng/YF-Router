@@ -8,6 +8,7 @@
 
 #import "TempAVC.h"
 #import "YFTestModel.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @import YFRouter;
 
@@ -21,8 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    YFLog(@"动态映射的age参数值----> %@",_age);
-    YFLog(@"动态映射的自定义model值 \n %@",[_testModel toString]);
 }
 
 - (IBAction)goBack:(id)sender {
@@ -33,24 +32,67 @@
     }
     
 }
+- (IBAction)getRouterParams:(id)sender {
+  id params = [YFRouterGlobleInstance yf_getTargetVCParams:self];
+    if (params == nil) {
+        [self showText:@"跳转此VC没有传递参数"];
+        return;
+    }
+    if ([params isKindOfClass:[NSString class]]) {
+        [self showText:params];
+    }else if([params isKindOfClass:[NSDictionary class]]){
+        [self showText:[self dictionaryToJson:params]];
+    }else if([params isKindOfClass:[NSArray class]]){
+        [self showText:[self arrayToJsonString:params]];
+    }else{
+//   参数为自定义对象
+        [self showText:[NSString stringWithFormat:@"%@",params]];
+    }
+  
+}
 
 - (IBAction)excutCallBack:(id)sender {
+//    [YFRouterGlobleInstance yf_executCallBackHandle:self andParams:@"这是回调回去的参数(这里可以换成任意数据类型)"];
+//    [self showText:@"请注意log打印！"];
     
-//    YFTestModel * customModel = [[YFTestModel alloc]initWithName:@"自定义model" andDataArr:@[
-//      @"回调值1",
-//      @"回调值2",
-//    ]];
-//
-//    [[YFRouterManager shareInstance] yf_executCallBackHandle:self andParams:@{
-//        @"name":@"这是回调回去的参数~~~",
-//        @"id":@"123456",
-//        @"customModel":customModel
-//    }];
-    
-    [YFRouterGlobleInstance yf_executCallBackHandle:self andParams:@"这是回到回去的参数"];
-    
-  id params =   [[YFRouterManager shareInstance] yf_getTargetVCParams:self];
-    YFLog(@"获取的绑定参数：%@",params);
+    for (NSInteger index = 0; index < 20; index++) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            [YFRouterGlobleInstance yf_registereUrl:[NSString stringWithFormat:@"url-%ld",index]
+//                                          toClsName:[NSString stringWithFormat:@"clsName-%ld",index]];
+            [YFRouterGlobleInstance yf_getClsNameWithUrl:[NSString stringWithFormat:@"url-%ld",index]];
+            [NSThread sleepForTimeInterval:index % 2 == 0?2:1];
+        
+        });
+        if (index == 10) {
+            [YFRouterGlobleInstance yf_registereUrl:@"中间插入" toClsName:@"中间插入class"];
+        }
+    }
+}
+
+-(void)showText:(NSString *)test{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    hud.backgroundColor = [UIColor blackColor];
+    hud.mode =MBProgressHUDModeText;
+    hud.label.text =test;
+    hud.label.numberOfLines = 0;
+    hud.margin =10.f;
+//    hud.offset.y =150.f;
+    hud.removeFromSuperViewOnHide =YES;
+    [hud hideAnimated:YES afterDelay:2.0f];
+//    [hud hide:YES afterDelay:3];
+}
+// dict -> string
+- (NSString*)dictionaryToJson:(NSDictionary *)dic
+{
+    NSError *parseError = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+}
+// arrary-> string
+- (NSString *)arrayToJsonString:(NSArray *)array{
+    NSError *error = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:array options:NSJSONWritingPrettyPrinted error:&error];
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];;
 }
 
 

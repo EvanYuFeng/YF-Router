@@ -20,26 +20,34 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我是tempA VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxb-t7-Im9">
-                    <rect key="frame" x="157" y="274" width="112" height="21"/>
+                    <rect key="frame" x="136" y="73" width="112" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYN-VS-4Jm">
-                    <rect key="frame" x="168" y="342" width="62" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="点击返回"/>
-                    <connections>
-                        <action selector="goBack:" destination="-1" eventType="touchUpInside" id="MWZ-xB-sOS"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37H-F8-723">
-                    <rect key="frame" x="153" y="399" width="108" height="30"/>
+                    <rect key="frame" x="140" y="304" width="108" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="执行路由的回调"/>
                     <connections>
                         <action selector="excutCallBack:" destination="-1" eventType="touchUpInside" id="VnA-96-xdE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgo-Cg-MeA">
+                    <rect key="frame" x="140" y="236" width="123" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="获取路由传递参数"/>
+                    <connections>
+                        <action selector="getRouterParams:" destination="-1" eventType="touchUpInside" id="otW-1i-e52"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYN-VS-4Jm">
+                    <rect key="frame" x="163" y="155" width="62" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="点击返回"/>
+                    <connections>
+                        <action selector="goBack:" destination="-1" eventType="touchUpInside" id="MWZ-xB-sOS"/>
                     </connections>
                 </button>
             </subviews>
