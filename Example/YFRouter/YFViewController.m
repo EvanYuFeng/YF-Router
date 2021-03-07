@@ -252,7 +252,7 @@
     
     NSString *exampUrl1 = @"aa.bb.com://detailPageA/list/:orderId";
     NSString *exampUrl2 = @"aa.bb.com://detailPageA/:orderId";
-    NSString *exampUrl3 = @"http://aa.bb.com/detailPageA/list/:orderId";
+//    NSString *exampUrl3 = @"http://aa.bb.com/detailPageA/list/:orderId";
     
     NSString *openUrl = @"aa.bb.com://detailPageA/list/123456?param1=value1&param2=value2&params3?";
     

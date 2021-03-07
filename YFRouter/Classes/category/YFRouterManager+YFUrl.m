@@ -80,7 +80,6 @@
 
 
 -(BOOL)yf_openVCWithUrl:(nonnull NSString *)clsUrl{
-//    return [self yf_openVCWithUrl:clsUrl andParams:nil];
     YFUrlComponent * rootUrlComponent = self.yf_root_url_component;
     if (rootUrlComponent.yf_subComponents.count == 0) {
         YFLog(@"please regist url init !!! no url be registed");
@@ -92,7 +91,7 @@
         NSArray * hostOrQueryArr = [clsUrl componentsSeparatedByString:@"?"];
         clsUrl = hostOrQueryArr.firstObject;
     }
-//    1.先分解 判断sheme是否存在
+//    先分解 判断sheme是否存在
     NSArray * shemeOrComponents = [clsUrl componentsSeparatedByString:@"://"];
     if (shemeOrComponents.count >= 2) {
          rootUrlComponent = rootUrlComponent.yf_subComponents[shemeOrComponents.firstObject];
@@ -104,7 +103,7 @@
     }else{
         shemeOrComponents = [clsUrl componentsSeparatedByString:@"/"];
     }
-//  
+
     NSMutableDictionary * urlParams = [[NSMutableDictionary alloc]init];
     NSArray * allSubComponents = shemeOrComponents;
     NSString * targetClsName ;
@@ -123,20 +122,20 @@
           break;
         }
     }
-//   综合所有的params
+//   合并所有的参数 param 和 query
     [urlParams setValuesForKeysWithDictionary:queryParams.copy];
-    NSLog(@"%@",urlParams);
-    
-    return true;
+    return [self yf_openVCWithName:targetClsName andParams:urlParams];
 }
 
 -(NSDictionary *)yf_getQueryParams:(NSString *)url{
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:url];
-    NSMutableDictionary * paramer = [NSMutableDictionary new];
+    NSMutableDictionary * queryParamer = [NSMutableDictionary new];
     [urlComponents.queryItems enumerateObjectsUsingBlock:^(NSURLQueryItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [paramer setObject:obj.value forKey:obj.name];
+        if (obj.value) {
+            [queryParamer setObject:obj.value forKey:obj.name];
+        }
     }];
-    return paramer;
+    return queryParamer;
 }
 
 -(BOOL)yf_openVCWithUrl:(nonnull NSString *)clsUrl
