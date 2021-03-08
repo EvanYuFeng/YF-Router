@@ -1,9 +1,9 @@
 {
   "name": "YF-Router",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "summary": "A router for ios",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/EvanYuFeng/YFRouter.git",
+  "homepage": "https://github.com/EvanYuFeng/YF-Router.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,16 +12,11 @@
     "reactfeng@gmail": "reactfeng@gmail"
   },
   "source": {
-    "git": "https://github.com/iosyufeng@sina.com/YFRouter.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/EvanYuFeng/YF-Router.git",
+    "tag": "0.1.3"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "YFRouter/Classes/**/*",
-  "resource_bundles": {
-    "YFRouter": [
-      "YFRouter/Assets/*.png"
-    ]
-  }
+  "source_files": "YFRouter/Classes/**/*"
 }
