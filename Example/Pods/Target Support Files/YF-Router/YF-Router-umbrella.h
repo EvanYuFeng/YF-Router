@@ -21,6 +21,7 @@
 #import "YFRouterSlotData.h"
 #import "YFRouterUrlCenter.h"
 #import "YFUrlComponent.h"
+#import "YFRouterHeader.h"
 
 FOUNDATION_EXPORT double YF_RouterVersionNumber;
 FOUNDATION_EXPORT const unsigned char YF_RouterVersionString[];

@@ -14,13 +14,19 @@
 
 -(void)registerHanleWithRouterCode:(NSString * _Nonnull )routerCode andHandle:(YFRouterHandleBlock)handleBlock{
 //    检测routercode是否合法
-    if (![self checkRouterCodeIsLegal:routerCode]) return YFLog(@"illegal routerCode be use !!!!");
+    if (![self checkRouterCodeIsLegal:routerCode]){
+        YFLog(@"illegal routerCode be use !!!!");
+        return;
+    }
 //    不存在开始注册
     if (![self checkHandleIsExist:routerCode])  self.yf_handleData[routerCode] = [handleBlock copy];
 }
 
 -(void)removeHandleWithRouterCode:(NSString * _Nonnull )routerCode{
-    if (![self checkRouterCodeIsLegal:routerCode]) return YFLog(@"illegal routerCode be use !!!!");
+    if (![self checkRouterCodeIsLegal:routerCode]){
+        YFLog(@"illegal routerCode be use !!!!");
+        return;
+    }
     if ([self checkHandleIsExist:routerCode]) [self.yf_handleData removeObjectForKey:routerCode];
 }
 

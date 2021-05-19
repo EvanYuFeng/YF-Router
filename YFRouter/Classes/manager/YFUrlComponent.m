@@ -44,7 +44,10 @@
 }
 
 -(void)yf_addParmasKey:(NSArray<NSString *>*)paramsKey{
-    if (self.yf_paramKeys) return YFLog(@" you are tring to regist a same url in same time");
+    if (self.yf_paramKeys) {
+        YFLog(@" you are tring to regist a same url in same time");
+        return;
+    }
     self.yf_paramKeys = [NSMutableArray arrayWithArray:paramsKey] ;
 }
 
