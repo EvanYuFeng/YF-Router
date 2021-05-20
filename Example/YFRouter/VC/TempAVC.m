@@ -9,8 +9,8 @@
 #import "TempAVC.h"
 #import "YFTestModel.h"
 #import <MBProgressHUD/MBProgressHUD.h>
+@import YF_Router;
 
-@import YFRouter;
 
 @interface TempAVC ()
 @property (nonatomic,strong) NSString *age;

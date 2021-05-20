@@ -7,7 +7,7 @@
 //
 
 @import UIKit;
-@import YFRouter;
+@import YF_Router;
 
 
 @interface CellModel : NSObject

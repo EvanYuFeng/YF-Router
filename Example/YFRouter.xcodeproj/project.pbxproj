@@ -21,6 +21,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		C478749D26565E4A00C62CEC /* YFUrlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C478749C26565E4A00C62CEC /* YFUrlVC.m */; };
 		C4ABC4A525ABFD8700FA4902 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4ABC4A425ABFD8700FA4902 /* Main.storyboard */; };
 		C4ABC4B425AC021700FA4902 /* TempAVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ABC4B225AC021700FA4902 /* TempAVC.m */; };
 		C4ABC4B525AC021700FA4902 /* TempAVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4ABC4B325AC021700FA4902 /* TempAVC.xib */; };
@@ -64,6 +65,8 @@
 		626B51841EFC393BA56E3A81 /* Pods_YFRouter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YFRouter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		918B55986E8C5A7417B70B86 /* Pods_YFRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YFRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		974E7736F70CDFE2D2F92564 /* Pods-YFRouter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YFRouter_Tests.debug.xcconfig"; path = "Target Support Files/Pods-YFRouter_Tests/Pods-YFRouter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C478749B26565E4A00C62CEC /* YFUrlVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFUrlVC.h; sourceTree = "<group>"; };
+		C478749C26565E4A00C62CEC /* YFUrlVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFUrlVC.m; sourceTree = "<group>"; };
 		C4ABC4A425ABFD8700FA4902 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C4ABC4B125AC021700FA4902 /* TempAVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TempAVC.h; sourceTree = "<group>"; };
 		C4ABC4B225AC021700FA4902 /* TempAVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempAVC.m; sourceTree = "<group>"; };
@@ -148,6 +151,7 @@
 		6003F593195388D20070C39A /* Example for YFRouter */ = {
 			isa = PBXGroup;
 			children = (
+				C478749A26565E1500C62CEC /* VC */,
 				6003F59C195388D20070C39A /* YFAppDelegate.h */,
 				6003F59D195388D20070C39A /* YFAppDelegate.m */,
 				6003F5A5195388D20070C39A /* YFViewController.h */,
@@ -155,8 +159,6 @@
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 				C4ABC4A425ABFD8700FA4902 /* Main.storyboard */,
-				C4ABC4B125AC021700FA4902 /* TempAVC.h */,
-				C4ABC4B225AC021700FA4902 /* TempAVC.m */,
 				C4ABC4B325AC021700FA4902 /* TempAVC.xib */,
 				C4ABC4EC25AD7E5000FA4902 /* YFTestModel.h */,
 				C4ABC4ED25AD7E5100FA4902 /* YFTestModel.m */,
@@ -202,6 +204,17 @@
 				2CF6562908B785F95BD27D5F /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		C478749A26565E1500C62CEC /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				C4ABC4B125AC021700FA4902 /* TempAVC.h */,
+				C4ABC4B225AC021700FA4902 /* TempAVC.m */,
+				C478749B26565E4A00C62CEC /* YFUrlVC.h */,
+				C478749C26565E4A00C62CEC /* YFUrlVC.m */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +411,7 @@
 				6003F5A7195388D20070C39A /* YFViewController.m in Sources */,
 				C4ABC4EE25AD7E5100FA4902 /* YFTestModel.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				C478749D26565E4A00C62CEC /* YFUrlVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

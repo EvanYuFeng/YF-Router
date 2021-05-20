@@ -6,8 +6,10 @@
 //  Copyright (c) 2021 iosyufeng@sina.com. All rights reserved.
 //
 
+@import YF_Router;
 #import "YFViewController.h"
 #import "YFTestModel.h"
+#import  "YFRouterHeader.h"
 
 
 @interface CellModel()
@@ -70,6 +72,7 @@
 
 //    设置全局关闭log
 //   [[YFRouterManager shareInstance]setIsLog:NO];
+    
 //   设置全局路由hook
     [YFRouterGlobleInstance setYf_hook_handle:^(NSString * _Nullable clsName, id  _Nullable params) {
         YFLog(@"拦截到的VC类名《%@》，参数《%@》",clsName,params);
@@ -90,9 +93,6 @@
 -(void)setUpView{
     [self.view addSubview:self.yf_tableView];
 }
-
-
-
 
 #pragma mark tableView--delegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -190,37 +190,61 @@
             @"excutType":@(0),
             @"title":@"常规push",
             @"targetVcName":@"TempAVC",
-            @"des":@"常规push，不带参数，不带回调，默认push"
+            @"des":@"常规push，不带参数，不带回调，默认push",
+            @"params":@{
+                    @"titleName":@"YFRouterName",
+                    @"age":@"18"
+            }
         },
 //        1
         @{
             @"title":@"常规push 带参数 字典",
             @"targetVcName":@"TempAVC",
-            @"des":@"常规push，带参数，参数字典类型，注意log !!!"
+            @"des":@"常规push，带参数，参数字典类型，注意log ",
+            @"params":@{
+                    @"titleName":@"YFRouterName",
+                    @"age":@"18"
+            }
         },
 //        2
         @{
             @"title":@"常规push 带参数 数组",
             @"targetVcName":@"TempAVC",
-            @"des":@"常规push，带参数，参数数组类型，注意log !!!"
+            @"des":@"常规push，带参数，参数数组类型，注意log ",
+            @"params":@{
+                    @"titleName":@"YFRouterName",
+                    @"age":@"18"
+            }
         },
 //        3
         @{
             @"title":@"常规push 带参数 自定义模型",
             @"targetVcName":@"TempAVC",
-            @"des":@"常规push，带参数，参数为自定义model，注意log ！！！"
+            @"des":@"常规push，带参数，参数为自定义model，注意log ",
+            @"params":@{
+                    @"titleName":@"YFRouterName",
+                    @"age":@"18"
+            }
         },
 //        4
         @{
             @"title":@"常规push 带参数,带回调",
             @"targetVcName":@"TempAVC",
-            @"des":@"常规push，带参数，带回调，默认push"
+            @"des":@"常规push，带参数，带回调，默认push",
+            @"params":@{
+                    @"titleName":@"YFRouterName",
+                    @"age":@"18"
+            }
         },
 //        5
         @{
             @"title":@"常规presnt 带参数,带回调",
             @"targetVcName":@"TempAVC",
-            @"des":@"常规presnt，不带参数，不带回调，"
+            @"des":@"常规presnt，不带参数，不带回调，",
+            @"params":@{
+                    @"titleName":@"YFRouterName",
+                    @"age":@"18"
+            }
         },
                         
     ];

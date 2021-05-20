@@ -172,7 +172,10 @@
     YFRouterSlotData * targetSlotData = [targetVC yf_routerSoletData];
     if (!targetSlotData) YFLog(@"《 %@ 》 class has no slotData!!! because it not be create by YFRouter",NSStringFromClass([targetVC class]));
     YFRouterHandleBlock targetBlock = [self.yf_handleCenter getHandleBlockWithRouterCode:targetSlotData.routerCode];
-    if (!targetBlock) return YFLog(@"《 %@ 》 class has no register callBackHandle!!! please check",NSStringFromClass([targetVC class]));
+    if (!targetBlock){
+        YFLog(@"《 %@ 》 class has no register callBackHandle!!! please check",NSStringFromClass([targetVC class]));
+        return;
+    }
     targetBlock(params);
 }
 
