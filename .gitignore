@@ -12,12 +12,14 @@ build/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+xcuserdata
 *.xccheckout
 profile
 *.moved-aside
 DerivedData
 *.hmap
 *.ipa
+*/YFRouter.xcworkspace
 
 # Bundler
 .bundle
