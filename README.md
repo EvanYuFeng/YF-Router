@@ -1,9 +1,9 @@
 # YFRouter
 
-[![CI Status](https://img.shields.io/travis/iosyufeng@sina.com/YF-Router.svg?style=flat)](https://travis-ci.org/iosyufeng@sina.com/YFRouter)
-[![Version](https://img.shields.io/cocoapods/v/YF-Router.svg?style=flat)](https://cocoapods.org/pods/YFRouter)
-[![License](https://img.shields.io/cocoapods/l/YF-Router.svg?style=flat)](https://cocoapods.org/pods/YFRouter)
-[![Platform](https://img.shields.io/cocoapods/p/YF-Router.svg?style=flat)](https://cocoapods.org/pods/YFRouter)
+[![CI Status](https://img.shields.io/travis/iosyufeng@sina.com/YF-Router.svg?style=flat)](https://travis-ci.org/iosyufeng@sina.com/YF-Router)
+[![Version](https://img.shields.io/cocoapods/v/YF-Router.svg?style=flat)](https://cocoapods.org/pods/YF-Router)
+[![License](https://img.shields.io/cocoapods/l/YF-Router.svg?style=flat)](https://cocoapods.org/pods/YF-Router)
+[![Platform](https://img.shields.io/cocoapods/p/YF-Router.svg?style=flat)](https://cocoapods.org/pods/YF-Router)
 
 
 ## 功能列表
