@@ -38,29 +38,29 @@ typedef UIViewController *(^YF_getvc_block)(void);
 -(NSMutableDictionary*)yf_chain_config;
 -(void)setYf_chain_config:(NSMutableDictionary *)yf_chain_config;
 
-// 设置vc类名
+/// 设置vc类名
 -(YF_clsName_block)yf_clsName;
 
-// 设置传递的参数
+/// 设置传递的参数
 -(YF_params_block)yf_params;
 
-// 设置回调
+/// 设置回调
 -(YF_backHandle_block)yf_backHandle;
 
-// 设置跳转类型
+/// 设置跳转类型
 -(YF_transitionsType_block)yf_transitionsType;
 
-// 设置跳转是否动画
+/// 设置跳转是否动画
 -(YF_animated_block)yf_animated;
 
-//设置跳转的url
+/// 设置跳转的url
 -(YF_url_block)yf_url;
 
-// 配置完成开始跳转（使用链式调用必须执行此句或者yf_getvc）
--(YF_done_block)yf_done;
-
-// 配置完成完成直接获取vc
+/// 配置完成完成直接获取vc
 -(YF_getvc_block)yf_getvc;
+
+/// 配置完成开始跳转（使用链式调用必须执行此句或者yf_getvc）
+-(YF_done_block)yf_done;
 
 @end
 

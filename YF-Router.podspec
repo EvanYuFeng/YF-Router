@@ -36,10 +36,8 @@ TODO: Add long description of the pod here.
 #     'YFRouter' => ['YFRouter/Assets/*.png']
 #   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-  
-#  pod lib lint --allow-warnings --use-libraries --verbose --no-clean --sources='https://github.com/EvanYuFeng/YF-Router.git'
-#  pod trunk push YF-Router.podspec
+# s.public_header_files = 'Pod/Classes/**/*.h'
+# s.frameworks = 'UIKit', 'MapKit'
+# s.dependency 'AFNetworking', '~> 2.3'
+
 end
