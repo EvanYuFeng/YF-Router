@@ -5,7 +5,7 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - MBProgressHUD (1.2.0)
-  - YF-Router (0.1.3)
+  - YF-Router (0.1.4)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -24,7 +24,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  YF-Router: caacaff0c87582da02beb797c792090c1e7035a1
+  YF-Router: a6b336769a7f81b657ebf594bf796642a8ea0ffe
 
 PODFILE CHECKSUM: af7a4f5c7016ed3bd9cb3c2ab57d7db4c4976ad3
 
