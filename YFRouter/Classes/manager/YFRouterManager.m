@@ -117,13 +117,22 @@
     return toVC;
 }
 
--(_Nonnull id)yf_getTargetVCParams:(_Nonnull id)targetVC{
+-(_Nullable id)yf_getTargetVCParams:(_Nonnull id)targetVC{
     YFRouterSlotData * targetSlotData = [targetVC yf_routerSoletData];
     if (!targetSlotData) {
         YFLog(@"《 %@ 》 class has no slotData!!! because it not be created by YFRouter",NSStringFromClass([targetVC class]));
         return nil;
     }
     return [targetSlotData params];
+}
+
+-( NSString * _Nullable )yf_getTargetVCRouterCode:(_Nonnull id)targetVC{
+    YFRouterSlotData * targetSlotData = [targetVC yf_routerSoletData];
+    if (!targetSlotData) {
+        YFLog(@"《 %@ 》 class has no slotData!!! because it not be created by YFRouter",NSStringFromClass([targetVC class]));
+        return nil;
+    }
+    return [targetSlotData routerCode];
 }
 
 -(void)yf_tryToMapParams:(_Nullable id)params toTargetVC:(id)toVC{
@@ -170,7 +179,10 @@
 
 -(void)yf_executCallBackHandle:(_Nonnull id)targetVC andParams:(_Nullable id)params{
     YFRouterSlotData * targetSlotData = [targetVC yf_routerSoletData];
-    if (!targetSlotData) YFLog(@"《 %@ 》 class has no slotData!!! because it not be create by YFRouter",NSStringFromClass([targetVC class]));
+    if (!targetSlotData){
+        YFLog(@"《 %@ 》 class has no slotData!!! because it not be create by YFRouter",NSStringFromClass([targetVC class]));
+        return;
+    }
     YFRouterHandleBlock targetBlock = [self.yf_handleCenter getHandleBlockWithRouterCode:targetSlotData.routerCode];
     if (!targetBlock){
         YFLog(@"《 %@ 》 class has no register callBackHandle!!! please check",NSStringFromClass([targetVC class]));

@@ -22,6 +22,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		C478749D26565E4A00C62CEC /* YFUrlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C478749C26565E4A00C62CEC /* YFUrlVC.m */; };
+		C47874B52656794F00C62CEC /* YFNormalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C47874B42656794F00C62CEC /* YFNormalVC.m */; };
+		C47874CC2657B38900C62CEC /* YFRouterDesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C47874CB2657B38900C62CEC /* YFRouterDesCell.m */; };
 		C4ABC4A525ABFD8700FA4902 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4ABC4A425ABFD8700FA4902 /* Main.storyboard */; };
 		C4ABC4B425AC021700FA4902 /* TempAVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ABC4B225AC021700FA4902 /* TempAVC.m */; };
 		C4ABC4B525AC021700FA4902 /* TempAVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4ABC4B325AC021700FA4902 /* TempAVC.xib */; };
@@ -67,6 +69,10 @@
 		974E7736F70CDFE2D2F92564 /* Pods-YFRouter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YFRouter_Tests.debug.xcconfig"; path = "Target Support Files/Pods-YFRouter_Tests/Pods-YFRouter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C478749B26565E4A00C62CEC /* YFUrlVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFUrlVC.h; sourceTree = "<group>"; };
 		C478749C26565E4A00C62CEC /* YFUrlVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFUrlVC.m; sourceTree = "<group>"; };
+		C47874B32656794F00C62CEC /* YFNormalVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFNormalVC.h; sourceTree = "<group>"; };
+		C47874B42656794F00C62CEC /* YFNormalVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFNormalVC.m; sourceTree = "<group>"; };
+		C47874CA2657B38900C62CEC /* YFRouterDesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFRouterDesCell.h; sourceTree = "<group>"; };
+		C47874CB2657B38900C62CEC /* YFRouterDesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFRouterDesCell.m; sourceTree = "<group>"; };
 		C4ABC4A425ABFD8700FA4902 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C4ABC4B125AC021700FA4902 /* TempAVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TempAVC.h; sourceTree = "<group>"; };
 		C4ABC4B225AC021700FA4902 /* TempAVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempAVC.m; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 		6003F593195388D20070C39A /* Example for YFRouter */ = {
 			isa = PBXGroup;
 			children = (
+				C47874C92657B36A00C62CEC /* Cell */,
 				C478749A26565E1500C62CEC /* VC */,
 				6003F59C195388D20070C39A /* YFAppDelegate.h */,
 				6003F59D195388D20070C39A /* YFAppDelegate.m */,
@@ -213,8 +220,19 @@
 				C4ABC4B225AC021700FA4902 /* TempAVC.m */,
 				C478749B26565E4A00C62CEC /* YFUrlVC.h */,
 				C478749C26565E4A00C62CEC /* YFUrlVC.m */,
+				C47874B32656794F00C62CEC /* YFNormalVC.h */,
+				C47874B42656794F00C62CEC /* YFNormalVC.m */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		C47874C92657B36A00C62CEC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C47874CA2657B38900C62CEC /* YFRouterDesCell.h */,
+				C47874CB2657B38900C62CEC /* YFRouterDesCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,12 +382,16 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YFRouter_Example/Pods-YFRouter_Example-frameworks.sh",
+				"${PODS_ROOT}/LookinServer/LookinServer.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/YF-Router/YF_Router.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LookinServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YF_Router.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +428,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C47874CC2657B38900C62CEC /* YFRouterDesCell.m in Sources */,
+				C47874B52656794F00C62CEC /* YFNormalVC.m in Sources */,
 				C4ABC4B425AC021700FA4902 /* TempAVC.m in Sources */,
 				6003F59E195388D20070C39A /* YFAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* YFViewController.m in Sources */,

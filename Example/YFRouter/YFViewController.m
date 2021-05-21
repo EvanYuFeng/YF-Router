@@ -59,6 +59,10 @@
 @property (nonatomic,strong) UITableView *yf_tableView;
 @property (nonatomic,strong) NSMutableArray *yf_table_data;
 
+@property (nonatomic,strong) UIButton * normalPushBtn;
+@property (nonatomic,strong) UIButton * urlPushBtn;
+
+
 @end
 
 @implementation YFViewController
@@ -77,17 +81,6 @@
     [YFRouterGlobleInstance setYf_hook_handle:^(NSString * _Nullable clsName, id  _Nullable params) {
         YFLog(@"拦截到的VC类名《%@》，参数《%@》",clsName,params);
     }];
-    
-    
-    
-//    for (NSInteger index = 0; index < 20; index++) {
-//
-//       NSInteger  tempIndex = index;
-//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//            [YFRouterGlobleInstance yf_registereUrl:[NSString stringWithFormat:@"url-%ld",tempIndex]
-//                                          toClsName:[NSString stringWithFormat:@"clsName-%ld",tempIndex]];
-//        });
-//    }
     
 }
 -(void)setUpView{
@@ -130,9 +123,12 @@
     
     switch (indexPath.row) {
         case 0:
-            [self testUrl];
+//            [self testUrl];
 //            链式调用
-//            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_done();
+            YFRouterGlobleInstance.yf_clsName(model.targetVcName).yf_params(@{
+                @"productId":@"54676547",
+                @"nickName":@"我来在列表页"
+                                                                            }).yf_done();
 //            常规调用
 //            [[YFRouterManager shareInstance] yf_openVCWithName:model.targetVcName];
             break;
@@ -183,13 +179,15 @@
 
 
 
+
+
 -(void)createData{
     NSArray *dataArr = @[
 //        0
         @{
             @"excutType":@(0),
             @"title":@"常规push",
-            @"targetVcName":@"TempAVC",
+            @"targetVcName":@"YFNormalVC",
             @"des":@"常规push，不带参数，不带回调，默认push",
             @"params":@{
                     @"titleName":@"YFRouterName",
