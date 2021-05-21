@@ -90,7 +90,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 获取目标VC 绑定的参数
 /// @param targetVC 目标VC实例
--(_Nonnull id)yf_getTargetVCParams:(_Nonnull id)targetVC;
+-(_Nullable id)yf_getTargetVCParams:(_Nonnull id)targetVC;
+
+
+/// 获取目标VC所绑定的routerCode
+/// @param targetVC 目标VC实例
+-( NSString * _Nullable )yf_getTargetVCRouterCode:(_Nonnull id)targetVC;
 
 
 /// hook 函数 全局设置 此函数会在目标vc创建成功后执行

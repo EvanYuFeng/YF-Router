@@ -12,12 +12,14 @@ build/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+xcuserdata
 *.xccheckout
 profile
 *.moved-aside
 DerivedData
 *.hmap
 *.ipa
+*/YFRouter.xcworkspace
 
 # Bundler
 .bundle
@@ -34,4 +36,4 @@ Carthage/Build
 # Note: if you ignore the Pods directory, make sure to uncomment
 # `pod install` in .travis.yml
 #
-# Pods/
+Pods/

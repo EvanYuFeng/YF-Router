@@ -5,6 +5,8 @@ platform :ios, '9.0'
 target 'YFRouter_Example' do
   pod 'YF-Router', :path => '../'
   pod 'MBProgressHUD', '~> 1.2.0'
+  pod 'Masonry'
+  pod 'LookinServer', :configurations => ['Debug']
   
 
   target 'YFRouter_Tests' do
