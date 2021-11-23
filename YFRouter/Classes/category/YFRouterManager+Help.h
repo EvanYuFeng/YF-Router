@@ -36,7 +36,6 @@
 
 
 - (UIViewController *)yf_topViewController;
-- (UIViewController *)yf_topViewController:(UIViewController *)vc;
 
 
 @end
